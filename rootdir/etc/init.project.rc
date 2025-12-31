@@ -1,0 +1,224 @@
+import /vendor/etc/init/hw/init.mtkgki.rc
+import /vendor/etc/init/hw/init.sec.rc
+
+# MTK project .rc configure
+
+on early-init
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules trace_mmstat.ko
+
+on init
+    mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
+    mkdir /storage/usbotg 0700 root root
+
+#+Chk S96901AA5-1364,zhaozhuo.wt,ADD, 20240914,persist loss premission with rc [1/2]
+    #create mountpoint for /mnt/vendor/persist partition
+    mkdir /mnt/vendor/persist 0771 system system
+
+on post-fs
+    chown system system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+
+    # We restorecon /mnt/vendor/persist to set SEPolicy label.
+    restorecon /mnt/vendor/persist
+#-Chk S96901AA5-1364,zhaozhuo.wt,ADD, 20240914,persist loss premission with rc [1/2]
+
+on post-fs-data
+
+#Camera
+    chmod 0660 /dev/MAINAF
+    chown system camera /dev/MAINAF
+
+    chmod 0660 /dev/MAINAF2
+    chown system camera /dev/MAINAF2
+
+    chmod 0660 /dev/SUBAF
+    chown system camera /dev/SUBAF
+
+    chmod 0660 /dev/GAF001AF
+    chown system camera /dev/GAF001AF
+
+    chmod 0660 /dev/DW9714AF
+    chown system camera /dev/DW9714AF
+
+    chmod 0660 /dev/LC898212AF
+    chown system camera /dev/LC898212AF
+
+    chmod 0660 /dev/BU64745GWZAF
+    chown system camera /dev/BU64745GWZAF
+
+#+S96818AA3-866,limeng5.wt,ADD,2024/08/26,add flashlight factory node
+    chmod 0666 /sys/devices/platform/flashlights_ocp8111/led_flash
+    chown system system /sys/devices/platform/flashlights_ocp8111/led_flash
+#-S96818AA3-866,limeng5.wt,ADD,2024/08/26,add flashlight factory node
+
+#+S96818AA3-866,limeng5.wt,ADD,2024/09/10,  add for dual camera calibration .
+    mkdir /mnt/vendor/persist/camera  0777 cameraserver cameraserver
+    chmod 0664 /mnt/vendor/persist/camera/calib_result
+#-S96818AA3-866,limeng5.wt,ADD,2024/09/10,  add for dual camera calibration .
+
+    chmod 0660 /dev/hardwareinfo
+    chown system system /dev/hardwareinfo
+
+#SMB
+    chown system system /proc/smb/ScreenComm
+    chmod 0660 /proc/smb/ScreenComm
+
+    chmod 0660 /dev/spm
+    chown system system /dev/spm
+
+#Charge
+    chown system system /sys/class/power_supply/battery/batt_soc_rechg
+    chown system system /sys/class/power_supply/battery/batt_full_capacity
+#Battery
+    chmod 0666 /sys/class/power_supply/battery/batt_slate_mode
+    chmod 0666 /sys/class/sec/switch/afc_disable
+
+#For sar-sensor
+#Allow access to sar sensors device attributes
+    chown system system /sys/class/capsense/ch0_cap_diff_dump
+    chmod 0660 /sys/class/capsense/ch0_cap_diff_dump
+    chown system system /sys/class/capsense/ch1_cap_diff_dump
+    chmod 0660 /sys/class/capsense/ch1_cap_diff_dump
+    chown system system /sys/class/capsense/ch2_cap_diff_dump
+    chmod 0660 /sys/class/capsense/ch2_cap_diff_dump
+    chown system system /sys/class/capsense/ch3_cap_diff_dump
+    chmod 0660 /sys/class/capsense/ch3_cap_diff_dump
+    chown system system /sys/class/capsense/ch4_cap_diff_dump
+    chmod 0660 /sys/class/capsense/ch4_cap_diff_dump
+
+    chown system system /sys/class/capsense/user_test
+    chmod 0660 /sys/class/capsense/user_test
+#+S96818BA1-4548, liuling3.wt,ADD, 2023/05/11, Modify owner and permission of sar channel_en
+    chown system system /sys/class/capsense/channel_en
+    chmod 0660 /sys/class/capsense/channel_en
+#-S96818BA1-4548, liuling3.wt,ADD, 2023/05/11, Modify owner and permission of sar channel_en
+
+#+S96818BA1-2208, liuling3.wt,ADD, 2023/05/15, add sar power reduction control switch
+    chown system system /sys/class/capsense/power_enable
+    chmod 0660 /sys/class/capsense/power_enable
+#-S96818BA1-2208, liuling3.wt,ADD, 2023/05/15, add sar power reduction control switch
+
+    chown system system /sys/class/sensors/grip_sensor/enable
+    chown system system /sys/class/sensors/grip_sensor/poll_delay
+    chown system system /sys/class/sensors/grip_sensor/enable_wakeup
+#+S96818BA1-1936, liuling3.wt,ADD, 2023/06/25,  add flush node for ss sensor hal
+    chown system radio /sys/class/sensors/grip_sensor/grip_flush
+#-S96818BA1-1936, liuling3.wt,ADD, 2023/06/25,  add flush node for ss sensor hal
+    chmod 0660 /sys/class/sensors/grip_sensor/enable
+    chmod 0660 /sys/class/sensors/grip_sensor/poll_delay
+    chmod 0660 /sys/class/sensors/grip_sensor/enable_wakeup
+#+S96818BA1-1936, liuling3.wt,ADD, 2023/06/25,  add flush node for ss sensor hal
+    chmod 0660 /sys/class/sensors/grip_sensor/grip_flush
+#-S96818BA1-1936, liuling3.wt,ADD, 2023/06/25,  add flush node for ss sensor hal
+
+    chown system system /sys/class/sensors/grip_sensor_sub/enable
+    chown system system /sys/class/sensors/grip_sensor_sub/poll_delay
+    chown system system /sys/class/sensors/grip_sensor_sub/enable_wakeup
+#+S96818BA1-1936, liuling3.wt,ADD, 2023/06/25,  add flush node for ss sensor hal
+    chown system radio /sys/class/sensors/grip_sensor_sub/grip_flush
+#-S96818BA1-1936, liuling3.wt,ADD, 2023/06/25,  add flush node for ss sensor hal
+    chmod 0660 /sys/class/sensors/grip_sensor_sub/enable
+    chmod 0660 /sys/class/sensors/grip_sensor_sub/poll_delay
+    chmod 0660 /sys/class/sensors/grip_sensor_sub/enable_wakeup
+#+S96818BA1-1936, liuling3.wt,ADD, 2023/06/25,  add flush node for ss sensor hal
+    chmod 0660 /sys/class/sensors/grip_sensor_sub/grip_flush
+#-S96818BA1-1936, liuling3.wt,ADD, 2023/06/25,  add flush node for ss sensor hal
+
+    chown system system /sys/class/sensors/grip_sensor_wifi/enable
+    chown system system /sys/class/sensors/grip_sensor_wifi/poll_delay
+    chown system system /sys/class/sensors/grip_sensor_wifi/enable_wakeup
+#+S96818BA1-1936, liuling3.wt,ADD, 2023/06/25,  add flush node for ss sensor hal
+    chown system radio /sys/class/sensors/grip_sensor_wifi/grip_flush
+#-S96818BA1-1936, liuling3.wt,ADD, 2023/06/25,  add flush node for ss sensor hal
+    chmod 0660 /sys/class/sensors/grip_sensor_wifi/enable
+    chmod 0660 /sys/class/sensors/grip_sensor_wifi/poll_delay
+    chmod 0660 /sys/class/sensors/grip_sensor_wifi/enable_wakeup
+#+S96818BA1-1936, liuling3.wt,ADD, 2023/06/25,  add flush node for ss sensor hal
+    chmod 0660 /sys/class/sensors/grip_sensor_wifi/grip_flush
+#-S96818BA1-1936, liuling3.wt,ADD, 2023/06/25,  add flush node for ss sensor hal
+
+    chown system system  /sys/class/input/input0/enable
+    chmod 0660 /sys/class/input/input0/enable
+    chown system system  /dev/input/event0
+    chmod 0660 /dev/input/event0
+    chown system system  /sys/class/input/input1/enable
+    chmod 0660 /sys/class/input/input1/enable
+    chown system system  /dev/input/event1
+    chmod 0660 /dev/input/event1
+    chown system system  /sys/class/input/input2/enable
+    chmod 0660 /sys/class/input/input2/enable
+    chown system system  /dev/input/event2
+    chmod 0660 /dev/input/event2
+    chown system system  /sys/class/input/input3/enable
+    chmod 0660 /sys/class/input/input3/enable
+    chown system system  /dev/input/event3
+    chmod 0660 /dev/input/event3
+    chown system system  /sys/class/input/input4/enable
+    chmod 0660 /sys/class/input/input4/enable
+    chown system system  /dev/input/event4
+    chmod 0660 /dev/input/event4
+    chown system system  /sys/class/input/input5/enable
+    chmod 0660 /sys/class/input/input5/enable
+    chown system system  /dev/input/event5
+    chmod 0660 /dev/input/event5
+    chown system system  /sys/class/input/input6/enable
+    chmod 0660 /sys/class/input/input6/enable
+    chown system system  /dev/input/event6
+    chmod 0660 /dev/input/event6
+    chown system system  /sys/class/input/input7/enable
+    chmod 0660 /sys/class/input/input7/enable
+    chown system system  /dev/input/event7
+    chmod 0660 /dev/input/event7
+    chown system system  /sys/class/input/input8/enable
+    chmod 0660 /sys/class/input/input8/enable
+    chown system system  /dev/input/event8
+    chmod 0660 /dev/input/event8
+    chown system system  /sys/class/input/input9/enable
+    chmod 0660 /sys/class/input/input9/enable
+    chown system system  /dev/input/event9
+    chmod 0660 /dev/input/event9
+
+
+on init
+    # Refer to http://source.android.com/devices/tech/storage/index.html
+    # It said, "Starting in Android 4.4, multiple external storage devices are surfaced to developers through
+    #           Context.getExternalFilesDirs(), Context.getExternalCacheDirs(), and Context.getObbDirs().
+    #           External storage devices surfaced through these APIs must be a semi-permanent part of the device (such as an SD card slot in a battery compartment).
+    #           Developers expect data stored in these locations to be available over long periods of time."
+    # Therefore, if the target doesn't support sd hot-plugging (Ex: the SD card slot in a battery compartment), we need to export SECONDARY_STORAGE in 'boot' section
+    #
+    # export SECONDARY_STORAGE /storage/sdcard1
+
+service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbotg /storage/usbotg
+    class late_start
+    disabled
+
+#+S98901AA2-391,gaowenqiang1.wt,add,2024/10/25,add widevine and attest key check property
+service check_keymaster /vendor/bin/check_keymaster
+    class core
+    user system
+    group system
+    oneshot
+    disabled
+    #seclabel u:r:check_keymaster:s0
+
+service check_keybox /vendor/bin/check_keybox
+    class core
+    user system
+    group system
+    oneshot
+    disabled
+    #seclabel u:r:check_keybox:s0
+
+on property:sys.boot_completed=1
+    start check_keymaster
+    start check_keybox
+#-S98901AA2-391,gaowenqiang1.wt,add,2024/10/25,add widevine and attest key check property
+
+# start mmstat
+on property:sys.boot_completed=1
+    mkdir /sys/kernel/tracing/instances/mmstat 711
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 0
+    write /sys/kernel/tracing/instances/mmstat/buffer_size_kb 16
+    write /sys/kernel/tracing/instances/mmstat/events/mmstat/enable 1
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 1

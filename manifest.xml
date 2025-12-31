@@ -1,0 +1,173 @@
+<manifest version="8.0" type="device" target-level="5">
+    <hal format="aidl">
+        <name>android.hardware.camera.provider</name>
+        <fqname>ICameraProvider/internal/0</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.gatekeeper</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IGatekeeper/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.gnss</name>
+        <fqname>IGnss/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.config</name>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.data</name>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.ims</name>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.messaging</name>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.modem</name>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.network</name>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.sap</name>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.sim</name>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.radio.voice</name>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.security.keymint</name>
+        <fqname>IKeyMintDevice/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.security.secureclock</name>
+        <fqname>ISecureClock/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.security.sharedsecret</name>
+        <fqname>ISharedSecret/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.soundtrigger3</name>
+        <fqname>ISoundTriggerHw/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.aee</name>
+        <fqname>IAee/AEE</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.apmonitor</name>
+        <fqname>IApmService/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.atci</name>
+        <fqname>IAtcid/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.audio</name>
+        <fqname>IMtkAudio/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.camera.atms</name>
+        <fqname>IATMs/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.camera.bgservice</name>
+        <fqname>IBGService/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.camera.isphal</name>
+        <fqname>IISPModule/internal/1</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.camera.postproc</name>
+        <fqname>IPostDevice/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.composer_ext</name>
+        <fqname>IComposerExt/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.dmc</name>
+        <fqname>IDmcService/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.log</name>
+        <fqname>ILog/ATMWiFiHidlServer</fqname>
+        <fqname>ILog/ConnsysFWHidlServer</fqname>
+        <fqname>ILog/LoggerHidlServer</fqname>
+        <fqname>ILog/MobileLogHidlServer</fqname>
+        <fqname>ILog/ModemLogHidlServer</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mdmonitor</name>
+        <fqname>IMDMonitorService/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.meta</name>
+        <fqname>IMetaTst/MetaATDHidlServer</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mmagent</name>
+        <fqname>IMMAgent/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mms</name>
+        <fqname>IMms/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mtkradioex.data</name>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mtkradioex.dch</name>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mtkradioex.ims</name>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mtkradioex.messaging</name>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mtkradioex.modem</name>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mtkradioex.network</name>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mtkradioex.rcs</name>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mtkradioex.sim</name>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.mtkradioex.voice</name>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.nvram</name>
+        <fqname>INvram/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.nwk_opt_new</name>
+        <fqname>INwkOptNew/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.mediatek.hardware.videotelephony</name>
+        <fqname>IVideoTelephony/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.gnss</name>
+        <fqname>ISehGnss/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.keymint</name>
+        <fqname>ISehKeyMintExtension/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.samsung.hardware.keymint</name>
+        <fqname>ISehKeyMintFactory/default</fqname>
+    </hal>
+</manifest>
