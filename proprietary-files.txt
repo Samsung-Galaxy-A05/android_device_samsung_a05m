@@ -1173,6 +1173,26 @@ vendor/etc/preset_music.bin
 vendor/etc/preset_ringtone.bin
 vendor/etc/preset_voip.bin
 
+# Camera ANC
+vendor/lib64/libAncDlmk.so
+vendor/lib64/libancbase-beauty.so
+vendor/lib64/libAncBeautify-hal.so
+vendor/lib64/libAncBeautifyImage.so
+vendor/lib64/libANCBeauty.so
+
+# Camera BST
+vendor/lib64/libBSTbase_share.so
+vendor/lib64/libBstBaseParams.so
+vendor/lib64/libBSTBeauty.so
+vendor/lib64/libBSTDualCamBokeh.so
+vendor/lib64/libbsthdr_impl.so
+vendor/lib64/libBSTHDRDETECT.so
+vendor/lib64/libbsthdrdetect_impl.so
+vendor/lib64/libbsthdrdetect_meta.so
+vendor/lib64/libBSTMultiExpoGainHDR.so
+vendor/lib64/libbstrawnight_impl.so
+vendor/lib64/libBstRefocusParam.so
+
 # Camera Configs
 vendor/etc/bokeh_beauty/ancbeautify_1_2_4_model
 vendor/etc/bokeh_beauty/beauty_new_1.cfg
