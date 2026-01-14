@@ -6,6 +6,10 @@ vendor/lib64/libaal_key.so
 vendor/lib64/libaal_sec.so
 vendor/lib64/libaalservice.so
 
+# APDB
+vendor/etc/apdb/APDB_MT6768_S01__W2517
+vendor/etc/apdb/APDB_MT6768_S01__W2517_ENUM
+
 # Audio Configs
 vendor/etc/audio_param/3GVTDV_AudioParam.xml
 vendor/etc/audio_param/3GVTDV_ParamUnitDesc.xml
