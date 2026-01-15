@@ -1370,6 +1370,14 @@ vendor/etc/init/lights-sec.rc
 vendor/etc/vintf/manifest/lights-sec.xml
 vendor/lib64/hw/lights.mt6768.so
 
+# MMAgent
+vendor/bin/hw/vendor.mediatek.hardware.mmagent-service
+vendor/etc/init/vendor.mediatek.hardware.mmagent-service.rc
+vendor/lib64/mt6768/libmmagent.so;SYMLINK=vendor/lib64/libmmagent.so
+vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
+vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
+vendor/lib64/vendor.mediatek.hardware.mmagent-V1-ndk.so
+
 # MMS
 vendor/etc/init/vendor.mediatek.hardware.mms-service.rc
 vendor/bin/hw/vendor.mediatek.hardware.mms-service
