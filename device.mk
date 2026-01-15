@@ -35,18 +35,11 @@ PRODUCT_CHARACTERISTICS := phone
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    init.insmod.sh \
-    init.pstore_blk.sh \
-    install-recovery.sh \
+    init.insmod.sh 
 
 PRODUCT_PACKAGES += \
     fstab.mt6768 \
-    factory_init.connectivity.common.rc \
-    factory_init.connectivity.rc \
-    factory_init.project.rc \
-    factory_init.rc \
-    init.aee.rc \
-    init.ago.rc \
+    fstab.mt6899.vendor_ramdisk \
     init.cgroup.rc \
     init.connectivity.common.rc \
     init.connectivity.rc \
@@ -58,18 +51,8 @@ PRODUCT_PACKAGES += \
     init.sec.rc \
     init.sensor_1_0.rc \
     init_connectivity.rc \
-    meta_init.connectivity.common.rc \
-    meta_init.connectivity.rc \
-    meta_init.modem.rc \
-    meta_init.project.rc \
-    meta_init.rc \
-    meta_init.vendor.rc \
-    multi_init.rc \
     init.recovery.mt6768.rc \
-    init.recovery.samsung.rc \
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6768:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6768
+    init.recovery.samsung.rc 
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 34
