@@ -1357,6 +1357,13 @@ vendor/lib64/libSonyIMX386PdafLibraryWrapper.so
 vendor/lib64/libSonyIMX519PdafLibrary.so
 vendor/lib64/libSonyIMX519PdafLibraryWrapper.so
 
+# Fuelgauged
+vendor/etc/init/fuelgauged_init.rc
+vendor/etc/init/fuelgauged_nvram_init.rc
+vendor/bin/fuelgauged
+vendor/bin/fuelgauged_nvram
+vendor/lib64/libfgauge_gm30.so
+
 # Lights
 vendor/bin/hw/android.hardware.lights-service.samsung
 vendor/etc/init/lights-sec.rc
