@@ -1357,3 +1357,6 @@ vendor/lib64/libSonyIMX386PdafLibraryWrapper.so
 vendor/lib64/libSonyIMX519PdafLibrary.so
 vendor/lib64/libSonyIMX519PdafLibraryWrapper.so
 
+# Samsung
+vendor/etc/floating_feature.xml
+vendor/lib64/libfloatingfeature.so
