@@ -4,9 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Enable updating of APEXes
+# Inherit non_ab product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+# Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+# Enforce generic ramdisk allow list
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
 # fastbootd
 PRODUCT_PACKAGES += \
