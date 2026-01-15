@@ -1370,6 +1370,11 @@ vendor/etc/init/lights-sec.rc
 vendor/etc/vintf/manifest/lights-sec.xml
 vendor/lib64/hw/lights.mt6768.so
 
+# MMS
+vendor/etc/init/vendor.mediatek.hardware.mms-service.rc
+vendor/bin/hw/vendor.mediatek.hardware.mms-service
+vendor/lib64/vendor.mediatek.hardware.mms-V1-ndk.so
+
 # Nvram
 vendor/bin/hw/vendor.mediatek.hardware.nvram-service
 vendor/bin/nvram_daemon
