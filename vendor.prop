@@ -1,0 +1,18 @@
+
+# MTK
+ro.netflix.bsp_rev=MTK6769-33944-1
+ro.vendor.mediatek.platform=MT6768
+ro.vendor.mtk_f2fs_enable=1
+ro.vendor.mediatek.version.branch=alps-mp-v0.mp1.tc10sp
+ro.vendor.mediatek.version.release=alps-mp-v0.mp1.tc10sp-lux.V1.76_P5
+ro.vendor.mtk_prefer_64bit_proc=0
+ro.vendor.mtk_thermal_2_0=0
+ro.vendor.mtk_emmc_support=1
+ro.vendor.mtk_fast_charging_support=1
+ro.vendor.mtk.sensor.support=yes
+persist.vendor.factory.GB2312=yes
+ro.vendor.mtk_config_max_dram_size=0x800000000
+ro.vendor.vt.mtk_thin_md_support_mode=0
+ro.vendor.mtk_wappush_support=1
+ro.vendor.mtk_dmc_support=1
+ro.vendor.mtk_mapi_support=1
