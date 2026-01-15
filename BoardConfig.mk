@@ -6,6 +6,10 @@
 
 DEVICE_PATH := device/samsung/a05m
 
+# A/B
+AB_OTA_UPDATER := false
+TARGET_OTA_ALLOW_NON_AB := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod

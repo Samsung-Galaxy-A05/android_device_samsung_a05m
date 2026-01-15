@@ -5,6 +5,7 @@
 #
 
 # Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # API levels
