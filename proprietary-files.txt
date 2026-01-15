@@ -1357,6 +1357,12 @@ vendor/lib64/libSonyIMX386PdafLibraryWrapper.so
 vendor/lib64/libSonyIMX519PdafLibrary.so
 vendor/lib64/libSonyIMX519PdafLibraryWrapper.so
 
+# Lights
+vendor/bin/hw/android.hardware.lights-service.samsung
+vendor/etc/init/lights-sec.rc
+vendor/etc/vintf/manifest/lights-sec.xml
+vendor/lib64/hw/lights.mt6768.so
+
 # Samsung
 vendor/etc/floating_feature.xml
 vendor/lib64/libfloatingfeature.so
