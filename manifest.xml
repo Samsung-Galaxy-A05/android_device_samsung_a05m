@@ -54,27 +54,6 @@
         <fqname>ISharedSecret/default</fqname>
     </hal>
     <hal format="aidl">
-        <name>android.hardware.soundtrigger3</name>
-        <version>2</version>
-        <fqname>ISoundTriggerHw/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.mediatek.hardware.aee</name>
-        <fqname>IAee/AEE</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.mediatek.hardware.apmonitor</name>
-        <fqname>IApmService/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.mediatek.hardware.atci</name>
-        <fqname>IAtcid/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.mediatek.hardware.audio</name>
-        <fqname>IMtkAudio/default</fqname>
-    </hal>
-    <hal format="aidl">
         <name>vendor.mediatek.hardware.camera.atms</name>
         <fqname>IATMs/default</fqname>
     </hal>
@@ -93,26 +72,6 @@
     <hal format="aidl">
         <name>vendor.mediatek.hardware.composer_ext</name>
         <fqname>IComposerExt/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.mediatek.hardware.dmc</name>
-        <fqname>IDmcService/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.mediatek.hardware.log</name>
-        <fqname>ILog/ATMWiFiHidlServer</fqname>
-        <fqname>ILog/ConnsysFWHidlServer</fqname>
-        <fqname>ILog/LoggerHidlServer</fqname>
-        <fqname>ILog/MobileLogHidlServer</fqname>
-        <fqname>ILog/ModemLogHidlServer</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.mediatek.hardware.mdmonitor</name>
-        <fqname>IMDMonitorService/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.mediatek.hardware.meta</name>
-        <fqname>IMetaTst/MetaATDHidlServer</fqname>
     </hal>
     <hal format="aidl">
         <name>vendor.mediatek.hardware.mmagent</name>
@@ -152,10 +111,6 @@
     <hal format="aidl">
         <name>vendor.mediatek.hardware.nvram</name>
         <fqname>INvram/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.mediatek.hardware.nwk_opt_new</name>
-        <fqname>INwkOptNew/default</fqname>
     </hal>
     <hal format="aidl">
         <name>vendor.mediatek.hardware.videotelephony</name>
