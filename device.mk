@@ -56,6 +56,10 @@ PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
 
+ # OpenCL
+ PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt   
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
