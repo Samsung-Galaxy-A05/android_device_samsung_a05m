@@ -19,6 +19,7 @@ ro.vendor.vt.mtk_thin_md_support_mode=0
 ro.vendor.mtk_wappush_support=1
 ro.vendor.mtk_dmc_support=1
 ro.vendor.mtk_mapi_support=1
+
 # Media
 media.c2.dmabuf.padding=3072
 media.c2.hal.selection=aidl
