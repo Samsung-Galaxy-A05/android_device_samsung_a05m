@@ -16,3 +16,19 @@ ro.vendor.vt.mtk_thin_md_support_mode=0
 ro.vendor.mtk_wappush_support=1
 ro.vendor.mtk_dmc_support=1
 ro.vendor.mtk_mapi_support=1
+
+# VPU
+ro.vendor.mtk_mvpu_support=0
+ro.vendor.mtk_mvpu_security_support=0
+ro.vendor.mtk_hdr10p_adaptive_support=0
+ro.vendor.mtk_hdr10_adaptive_support=0
+ro.vendor.mtk_hlg_adaptive_support=0
+ro.vendor.mtk_hdrvivid_adaptive_support=0
+ro.vendor.mtk_airegionpq_adaptive_support=0
+ro.vendor.mtk_sdr_adaptive_support=0
+ro.vendor.mtk_fd_support=1
+ro.vendor.mtk_wapi_support=1
+ro.vendor.mtk_video_hevc_enc_support=1
+vendor.mtk.vdec.waitkeyframeforplay=11
+vendor.mtk.vdec.decode.error.handle.mode=3
+ro.vendor.mtk_sec_video_path_support=1
