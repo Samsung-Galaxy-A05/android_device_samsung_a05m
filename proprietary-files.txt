@@ -1547,6 +1547,54 @@ vendor/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
 vendor/etc/floating_feature.xml
 vendor/lib64/libfloatingfeature.so
 
+# Sec RILD - a05mxx-user-14-UP1A.231005.007-A055FXXU4CXF1-release-keys
+vendor/bin/hw/rild
+vendor/bin/secril_config_svc
+vendor/etc/init/init.vendor.onebinary.rc
+vendor/etc/init/init.vendor.rilcommon.rc
+vendor/etc/init/vendor.samsung.rilchip.mediatek.rc
+vendor/etc/locale/plmn_delta_eng.bin
+vendor/etc/locale/plmn_delta_zh-rCN.bin
+vendor/etc/locale/plmn_delta_zh-rHK.bin
+vendor/etc/locale/plmn_delta_zh-rTW.bin
+vendor/etc/plmn_delta.bin
+vendor/etc/plmn_delta_attaio.bin
+vendor/etc/plmn_delta_hktw.bin
+vendor/etc/plmn_delta_ltn.bin
+vendor/etc/plmn_delta_usagsm.bin
+vendor/etc/plmn_se13_prebuilt.bin
+vendor/etc/permissions/vendor.samsung.hardware.telephony.cdma_excluded.xml
+vendor/etc/permissions/vendor.samsung.hardware.telephony.gsm.xml
+vendor/etc/permissions/vendor.samsung.hardware.telephony.satellite.xml
+vendor/etc/mtu-conf.xml
+vendor/etc/mvno_list.xml
+vendor/etc/pdpcnt-conf.xml
+vendor/etc/special_pws_channel.xml
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.mediatek.xml
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude_ship.mediatek.xml
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_30.xml
+vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_30.xml
+vendor/lib64/libengmode_client.so
+vendor/lib64/libprotobuf-cpp-full-3.9.1.so
+vendor/lib64/libsecnativefeature.so
+vendor/lib64/libSemDataProps.so
+vendor/lib64/libsemnativecarrierfeature.so
+vendor/lib64/libVendorSemDataProps.so
+vendor/lib64/libVendorSemTelephonyProps.so
+vendor/lib64/libvkmanager_vendor.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio@2.1.so
+vendor/lib64/vendor.samsung.hardware.radio@2.2.so
+
+# Sec RIL - a32xx-user-13-TP1A.220624.014-A325FXXU2CVK3-release-keys
+vendor/lib64/libsec-ril.so
+vendor/lib64/libsecril-client.so
+vendor/lib64/libSemTelephonyProps.so
+vendor/lib64/libril_sem.so
+
 # Sensors
 vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 vendor/lib64/hw/sensors.mt6768.so

@@ -37,6 +37,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+# DTB
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/dtb.img:$(TARGET_OUT)/dtb.img
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
@@ -80,6 +84,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.2 \
+    android.hardware.radio@1.5 \
+    android.hardware.radio.deprecated@1.0
 
 # Rootdir
 PRODUCT_PACKAGES += \
