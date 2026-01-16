@@ -1361,6 +1361,41 @@ vendor/lib64/libSonyIMX519PdafLibraryWrapper.so
 vendor/bin/chipinfo
 vendor/etc/init/chipinfo_init.rc
 
+# Firmware
+vendor/firmware/BT_FW.cfg
+vendor/firmware/chipone_firmware_hkc.bin
+vendor/firmware/chipone_firmware_mdt.bin
+vendor/firmware/connfem.cfg
+vendor/firmware/fm_cust.cfg
+vendor/firmware/focaltech_ft8057s_fw_mdt.bin
+vendor/firmware/focaltech_ft8057s_mdt.ini
+vendor/firmware/fs1801.fsm
+vendor/firmware/GC7202_mp_hkc.bin
+vendor/firmware/GC7202_mp_txd.bin
+vendor/firmware/gcore_mp_test_hkc.ini
+vendor/firmware/gcore_mp_test_txd.ini
+vendor/firmware/gcore_tp_fw_hkc.bin
+vendor/firmware/gcore_tp_fw_txd.bin
+vendor/firmware/grippower.info
+vendor/firmware/gt1151_default_firmware2.img
+vendor/firmware/lib3a.ccu
+vendor/firmware/mt6631_fm_v1_coeff.bin
+vendor/firmware/mt6631_fm_v1_patch.bin
+vendor/firmware/novatek_ts_truly_fw.bin
+vendor/firmware/novatek_ts_truly_mp.bin
+vendor/firmware/ovt_tcm_boe_cap_limits.csv
+vendor/firmware/ovt_tcm_cap_limits.csv
+vendor/firmware/ovt_td4160_fw.img
+vendor/firmware/ovt_td4160_fw_boe.img
+vendor/firmware/remoteproc_scp
+vendor/firmware/soc1_0_patch_mcu_1a_1_hdr.bin
+vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin
+vendor/firmware/soc1_0_ram_mcu_1a_1_hdr.bin
+vendor/firmware/soc1_0_ram_wifi_1a_1_hdr.bin
+vendor/firmware/wifi.cfg
+vendor/firmware/WIFI_RAM_CODE_soc1_0_1a_1.bin
+vendor/firmware/WMT_SOC.cfg
+
 # Fuelgauged
 vendor/etc/init/fuelgauged_init.rc
 vendor/etc/init/fuelgauged_nvram_init.rc
