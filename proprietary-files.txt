@@ -1418,6 +1418,10 @@ vendor/bin/fuelgauged
 vendor/bin/fuelgauged_nvram
 vendor/lib64/libfgauge_gm30.so
 
+# Gatekeeper
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
+vendor/lib64/hw/gatekeeper.mt6768.so
+
 # Lights
 vendor/bin/hw/android.hardware.lights-service.samsung
 vendor/etc/init/lights-sec.rc
