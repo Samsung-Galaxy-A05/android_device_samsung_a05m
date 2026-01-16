@@ -1372,6 +1372,14 @@ vendor/lib64/libSonyIMX519PdafLibraryWrapper.so
 vendor/bin/chipinfo
 vendor/etc/init/chipinfo_init.rc
 
+# Connectivity
+vendor/etc/init/init.wlan_drv.rc
+vendor/etc/init/init.bt_drv.rc
+vendor/etc/init/init.wmt_drv.rc
+vendor/etc/init/init.connfem.rc
+vendor/etc/init/init.fmradio_drv.rc
+vendor/lib64/libconnfem.so
+
 # DRM (Widevine)
 vendor/apex/com.google.android.widevine.nonupdatable.apex
 vendor/lib64/liboemcrypto.so

@@ -2,6 +2,15 @@
 ro.vendor.bt.platform=connac1x
 ro.vendor.bt.connac3=no
 
+# Connectivity 
+ro.vendor.connsys.dedicated.log.port=bt,wifi,gps,mcu
+persist.vendor.connsys.chipid=-1
+persist.vendor.connsys.patch.version=-1
+persist.vendor.connsys.dynamic.dump=0
+vendor.connsys.driver.ready=no
+persist.vendor.connsys.fm_chipid=mt6631
+ro.vendor.connsys.dedicated.log=1
+
 # MTK
 ro.netflix.bsp_rev=MTK6769-33944-1
 ro.vendor.mediatek.platform=MT6768
