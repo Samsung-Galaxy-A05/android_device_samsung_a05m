@@ -1173,6 +1173,17 @@ vendor/etc/preset_music.bin
 vendor/etc/preset_ringtone.bin
 vendor/etc/preset_voip.bin
 
+# Bluetooth
+vendor/lib64/libbluetooth_audio_session_aidl_mtk.so
+vendor/lib64/libbluetooth_audio_session_mediatek.so
+vendor/lib64/libbluetooth_hw_test.so
+vendor/lib64/libbluetooth_mtk.so
+vendor/lib64/libbluetooth_mtk_pure.so
+vendor/lib64/libbluetooth_relayer.so
+vendor/lib64/libbluetoothem_mtk.so
+vendor/lib64/libbt-vendor.so
+vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
+
 # Camera ANC
 vendor/lib64/libAncDlmk.so
 vendor/lib64/libancbase-beauty.so

@@ -1,3 +1,6 @@
+# Bluetooth
+ro.vendor.bt.platform=connac1x
+ro.vendor.bt.connac3=no
 
 # MTK
 ro.netflix.bsp_rev=MTK6769-33944-1
