@@ -33,6 +33,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapgrowthlimit=256m \
     dalvik.vm.heapsize=512m
 
+# DRM (Clearkey)
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
