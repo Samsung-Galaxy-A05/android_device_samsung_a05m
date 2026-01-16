@@ -11,6 +11,11 @@ vendor.connsys.driver.ready=no
 persist.vendor.connsys.fm_chipid=mt6631
 ro.vendor.connsys.dedicated.log=1
 
+# DRM
+drm.service.enabled=true
+ro.vendor.mtk_widevine_drm_l1_support=1
+ro.mtk_key_manager_support=1
+
 # MTK
 ro.netflix.bsp_rev=MTK6769-33944-1
 ro.vendor.mediatek.platform=MT6768
