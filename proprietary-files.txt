@@ -1372,6 +1372,10 @@ vendor/lib64/libSonyIMX519PdafLibraryWrapper.so
 vendor/bin/chipinfo
 vendor/etc/init/chipinfo_init.rc
 
+# DRM (Widevine)
+vendor/apex/com.google.android.widevine.nonupdatable.apex
+vendor/lib64/liboemcrypto.so
+
 # Firmware
 vendor/firmware/BT_FW.cfg
 vendor/firmware/chipone_firmware_hkc.bin
