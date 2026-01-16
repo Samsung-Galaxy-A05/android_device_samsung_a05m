@@ -21,6 +21,18 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
+# Dalvik
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapmaxfree=12m \
+    dalvik.vm.heapminfree=8m \
+    dalvik.vm.heaptargetutilization=0.6 \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt \
+    dalvik.vm.heapgrowthlimit=256m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heapgrowthlimit=256m \
+    dalvik.vm.heapsize=512m
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
