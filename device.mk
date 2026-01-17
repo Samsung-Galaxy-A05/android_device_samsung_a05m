@@ -65,7 +65,13 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt   
 
 # Overlays
-PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_PACKAGES += \
+    FrameworksResOverlay \
+    LineagePlatfromOverlay \
+    SettingsResOverlayRodin \
+    SystemUIResOverlay \
+    TetheringOverlay \
+    WifiOverlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
