@@ -1620,6 +1620,24 @@ vendor/lib64/librgbwlightsensor.so
 vendor/lib64/libsensor_custom.so
 vendor/lib64/libhidparser.so
 
+# TeeGris
+vendor/bin/trusty-ut-ctrl
+vendor/bin/tzdaemon
+vendor/bin/tzts_daemon
+vendor/bin/check_keybox
+vendor/bin/check_keymaster
+vendor/bin/create_factory_efs_file
+vendor/bin/wvkprov
+vendor/etc/init/factorybsp_service.rc
+vendor/etc/init/teegris.rc
+vendor/lib64/libteecl.so
+vendor/lib64/libskeymint_cli.so
+vendor/lib64/libskeymint10device.so
+vendor/lib64/libTEECommon.so
+vendor/lib64/libthha.so
+vendor/lib64/libuuid.dylib.so
+vendor/lib64/libuuid.so
+
 # USB
 vendor/bin/hw/android.hardware.usb@1.3-service.coral
 vendor/etc/init/android.hardware.usb@1.3-service.coral.rc
