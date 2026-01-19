@@ -1638,6 +1638,25 @@ vendor/lib64/libthha.so
 vendor/lib64/libuuid.dylib.so
 vendor/lib64/libuuid.so
 
+# Thermal
+vendor/bin/thermal
+vendor/bin/thermal_manager
+vendor/bin/thermalloadalgod
+vendor/etc/.tp/.ht120.mtc
+vendor/etc/.tp/.thermal_policy_00
+vendor/etc/.tp/.thermal_policy_03
+vendor/etc/.tp/.thermal_policy_05
+vendor/etc/.tp/.thermal_policy_08
+vendor/etc/.tp/thermal.conf
+vendor/etc/.tp/thermal.off.conf
+vendor/etc/throttle.sh
+vendor/etc/init/init.thermal.rc
+vendor/etc/init/init.thermal_manager.rc
+vendor/etc/init/init.thermalloadalgod.rc
+vendor/lib64/hw/thermal_hal.so
+vendor/lib64/libmtcloader.so
+vendor/lib64/libthermalalgo.so
+
 # USB
 vendor/bin/hw/android.hardware.usb@1.3-service.coral
 vendor/etc/init/android.hardware.usb@1.3-service.coral.rc
