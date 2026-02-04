@@ -92,6 +92,12 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.1 \
     android.hardware.sensors-V2-ndk.vendor 
 
+# Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.common-V5-ndk.vendor \
+    android.hardware.graphics.common-V6-ndk.vendor \
+    android.hardware.graphics.common-V7-ndk.vendor
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-V3-ndk.vendor \
