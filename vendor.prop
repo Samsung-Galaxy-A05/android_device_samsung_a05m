@@ -17,7 +17,6 @@ vendor.connsys.driver.ready=no
 persist.vendor.connsys.fm_chipid=mt6631
 ro.vendor.connsys.dedicated.log=1
 
-
 # Camera
 ro.vendor.mtk_cam_security_support=1
 ro.vendor.camera.insensorzoom.support=0
@@ -53,6 +52,16 @@ ro.vendor.mtk_camera_app_version=3
 drm.service.enabled=true
 ro.vendor.mtk_widevine_drm_l1_support=1
 ro.mtk_key_manager_support=1
+
+# FM
+ro.vendor.fm.platform=mt6631
+
+# GNSS
+ro.vendor.gps.chrdev=gps_drv_stp
+ro.vendor.mtk_gnss_tc10_hidl_support=1
+ro.vendor.mtk_agps_app=1
+ro.vendor.mtk_log_hide_gps=2
+ro.vendor.mtk_gps_support=1
 
 # MTK
 ro.netflix.bsp_rev=MTK6769-33944-1
@@ -163,3 +172,10 @@ ro.vendor.mtk_video_hevc_enc_support=1
 vendor.mtk.vdec.waitkeyframeforplay=11
 vendor.mtk.vdec.decode.error.handle.mode=3
 ro.vendor.mtk_sec_video_path_support=1
+
+# Wlan
+ro.vendor.wifi.sap.interface=swlan0
+ro.vendor.wlan.standalone.log=y
+ro.vendor.wlan.gen=gen4m_6768
+ro.vendor.wlan.chrdev=wmt_chrdev_wifi
+ro.vendor.wifi.sap.concurrent.iface=ap1
