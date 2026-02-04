@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---
+  This is an example to configure LE Audio hardware offload supported capability settings
+  In the follow list, there would be only one list in this file. Add element into each list as needed.
+
+  codecConfigurationList:
+    Supported codec capability along with its parameter setting
+
+  strategyConfigurationList:
+     ASE Configuration strategies
+
+  configurationList:
+    For each configuration , there are two attributes
+      - codecConfiguration
+      - strategyConfiguration
+
+  scenarioList:
+    There would be only one `scenarios` group
+    For each scenario, the are two attributes
+      - encode
+      - decode
+    If a scenario is unidirectional, mark another direction as `invalid`
+    The configuration should be chosen from `configurationList`
+-->
+<leAudioOffloadSetting>
+  <scenarioList>
+    <!-- encode only -->
+    <scenario encode="OneChanMono_8_1" decode="invalid"/>
+    <scenario encode="TwoChanStereo_8_1" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_8_1" decode="invalid"/>
+    <scenario encode="OneChanMono_8_2" decode="invalid"/>
+    <scenario encode="TwoChanStereo_8_2" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_8_2" decode="invalid"/>
+    <scenario encode="OneChanMono_16_1" decode="invalid"/>
+    <scenario encode="TwoChanStereo_16_1" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_16_1" decode="invalid"/>
+    <scenario encode="OneChanMono_16_2" decode="invalid"/>
+    <scenario encode="TwoChanStereo_16_2" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_16_2" decode="invalid"/>
+    <scenario encode="OneChanMono_24_1" decode="invalid"/>
+    <scenario encode="TwoChanStereo_24_1" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_24_1" decode="invalid"/>
+    <scenario encode="OneChanMono_24_2" decode="invalid"/>
+    <scenario encode="TwoChanStereo_24_2" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_24_2" decode="invalid"/>
+    <scenario encode="OneChanMono_32_1" decode="invalid"/>
+    <scenario encode="TwoChanStereo_32_1" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_32_1" decode="invalid"/>
+    <scenario encode="OneChanMono_32_2" decode="invalid"/>
+    <scenario encode="TwoChanStereo_32_2" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_32_2" decode="invalid"/>
+    <scenario encode="OneChanMono_48_1" decode="invalid"/>
+    <scenario encode="TwoChanStereo_48_1" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_48_1" decode="invalid"/>
+    <scenario encode="OneChanMono_48_2" decode="invalid"/>
+    <scenario encode="TwoChanStereo_48_2" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_48_2" decode="invalid"/>
+    <scenario encode="OneChanMono_48_3" decode="invalid"/>
+    <scenario encode="TwoChanStereo_48_3" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_48_3" decode="invalid"/>
+    <scenario encode="OneChanMono_48_4" decode="invalid"/>
+    <scenario encode="TwoChanStereo_48_4" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_48_4" decode="invalid"/>
+    <scenario encode="OneChanMono_48_5" decode="invalid"/>
+    <scenario encode="TwoChanStereo_48_5" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_48_5" decode="invalid"/>
+    <scenario encode="OneChanMono_48_6" decode="invalid"/>
+    <scenario encode="TwoChanStereo_48_6" decode="invalid"/>
+    <scenario encode="TwoChanTwoDevStereo_48_6" decode="invalid"/>
+    <!-- decode only -->
+    <scenario encode="invalid" decode="OneChanMono_8_1" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_8_1" />
+    <scenario encode="invalid" decode="TwoChanStereo_8_1" />
+    <scenario encode="invalid" decode="OneChanMono_8_2" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_8_2" />
+    <scenario encode="invalid" decode="TwoChanStereo_8_2" />
+    <scenario encode="invalid" decode="OneChanMono_16_1" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_16_1" />
+    <scenario encode="invalid" decode="TwoChanStereo_16_1" />
+    <scenario encode="invalid" decode="OneChanMono_16_2" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_16_2" />
+    <scenario encode="invalid" decode="TwoChanStereo_16_2" />
+    <scenario encode="invalid" decode="OneChanMono_24_1" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_24_1" />
+    <scenario encode="invalid" decode="TwoChanStereo_24_1" />
+    <scenario encode="invalid" decode="OneChanMono_24_2" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_24_2" />
+    <scenario encode="invalid" decode="TwoChanStereo_24_2" />
+    <scenario encode="invalid" decode="OneChanMono_32_1" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_32_1" />
+    <scenario encode="invalid" decode="TwoChanStereo_32_1" />
+    <scenario encode="invalid" decode="OneChanMono_32_2" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_32_2" />
+    <scenario encode="invalid" decode="TwoChanStereo_32_2" />
+    <scenario encode="invalid" decode="OneChanMono_48_1" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_48_1" />
+    <scenario encode="invalid" decode="TwoChanStereo_48_1" />
+    <scenario encode="invalid" decode="OneChanMono_48_2" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_48_2" />
+    <scenario encode="invalid" decode="TwoChanStereo_48_2" />
+    <scenario encode="invalid" decode="OneChanMono_48_3" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_48_3" />
+    <scenario encode="invalid" decode="TwoChanStereo_48_3" />
+    <scenario encode="invalid" decode="OneChanMono_48_4" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_48_4" />
+    <scenario encode="invalid" decode="TwoChanStereo_48_4" />
+    <scenario encode="invalid" decode="OneChanMono_48_5" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_48_5" />
+    <scenario encode="invalid" decode="TwoChanStereo_48_5" />
+    <scenario encode="invalid" decode="OneChanMono_48_6" />
+    <scenario encode="invalid" decode="TwoChanTwoDevStereo_48_6" />
+    <scenario encode="invalid" decode="TwoChanStereo_48_6" />
+    <!-- encode and decode -->
+    <scenario encode="OneChanStereo_8_1" decode="OneChanStereo_8_1"/>
+    <scenario encode="OneChanStereo_8_1" decode="OneChanMono_8_1"/>
+    <scenario encode="TwoChanStereo_8_1" decode="OneChanMono_8_1"/>
+    <scenario encode="OneChanMono_8_1" decode="OneChanMono_8_1"/>
+    <scenario encode="TwoChanTwoDevStereo_8_1" decode="TwoChanTwoDevStereo_8_1"/>
+    <scenario encode="TwoChanTwoDevStereo_8_1" decode="OneChanMono_8_1"/>
+    <scenario encode="OneChanStereo_8_2" decode="OneChanStereo_8_2"/>
+    <scenario encode="OneChanStereo_8_2" decode="OneChanMono_8_2"/>
+    <scenario encode="TwoChanStereo_8_2" decode="OneChanMono_8_2"/>
+    <scenario encode="OneChanMono_8_2" decode="OneChanMono_8_2"/>
+    <scenario encode="TwoChanTwoDevStereo_8_2" decode="TwoChanTwoDevStereo_8_2"/>
+    <scenario encode="TwoChanTwoDevStereo_8_2" decode="OneChanMono_8_2"/>
+    <scenario encode="OneChanStereo_16_1" decode="OneChanStereo_16_1"/>
+    <scenario encode="OneChanStereo_16_1" decode="OneChanMono_16_1"/>
+    <scenario encode="TwoChanStereo_16_1" decode="OneChanMono_16_1"/>
+    <scenario encode="OneChanMono_16_1" decode="OneChanMono_16_1"/>
+    <scenario encode="TwoChanTwoDevStereo_16_1" decode="TwoChanTwoDevStereo_16_1"/>
+    <scenario encode="TwoChanTwoDevStereo_16_1" decode="OneChanMono_16_1"/>
+    <scenario encode="OneChanStereo_16_2" decode="OneChanStereo_16_2"/>
+    <scenario encode="OneChanStereo_16_2" decode="OneChanMono_16_2"/>
+    <scenario encode="TwoChanStereo_16_2" decode="OneChanMono_16_2"/>
+    <scenario encode="OneChanMono_16_2" decode="OneChanMono_16_2"/>
+    <scenario encode="TwoChanTwoDevStereo_16_2" decode="TwoChanTwoDevStereo_16_2"/>
+    <scenario encode="TwoChanTwoDevStereo_16_2" decode="OneChanMono_16_2"/>
+    <scenario encode="OneChanStereo_24_1" decode="OneChanStereo_24_1"/>
+    <scenario encode="OneChanStereo_24_1" decode="OneChanMono_24_1"/>
+    <scenario encode="TwoChanStereo_24_1" decode="OneChanMono_24_1"/>
+    <scenario encode="OneChanMono_24_1" decode="OneChanMono_24_1"/>
+    <scenario encode="TwoChanTwoDevStereo_24_1" decode="TwoChanTwoDevStereo_24_1"/>
+    <scenario encode="TwoChanTwoDevStereo_24_1" decode="OneChanMono_24_1"/>
+    <scenario encode="OneChanStereo_24_2" decode="OneChanStereo_24_2"/>
+    <scenario encode="OneChanStereo_24_2" decode="OneChanMono_24_2"/>
+    <scenario encode="TwoChanStereo_24_2" decode="OneChanMono_24_2"/>
+    <scenario encode="OneChanMono_24_2" decode="OneChanMono_24_2"/>
+    <scenario encode="TwoChanTwoDevStereo_24_2" decode="TwoChanTwoDevStereo_24_2"/>
+    <scenario encode="TwoChanTwoDevStereo_24_2" decode="OneChanMono_24_2"/>
+    <scenario encode="OneChanStereo_32_1" decode="OneChanStereo_32_1"/>
+    <scenario encode="OneChanStereo_32_1" decode="OneChanMono_32_1"/>
+    <scenario encode="TwoChanStereo_32_1" decode="OneChanMono_32_1"/>
+    <scenario encode="OneChanMono_32_1" decode="OneChanMono_32_1"/>
+    <scenario encode="TwoChanTwoDevStereo_32_1" decode="TwoChanTwoDevStereo_32_1"/>
+    <scenario encode="TwoChanTwoDevStereo_32_1" decode="OneChanMono_32_1"/>
+    <scenario encode="OneChanStereo_32_2" decode="OneChanStereo_32_2"/>
+    <scenario encode="OneChanStereo_32_2" decode="OneChanMono_32_2"/>
+    <scenario encode="TwoChanStereo_32_2" decode="OneChanMono_32_2"/>
+    <scenario encode="OneChanMono_32_2" decode="OneChanMono_32_2"/>
+    <scenario encode="TwoChanTwoDevStereo_32_2" decode="TwoChanTwoDevStereo_32_2"/>
+    <scenario encode="TwoChanTwoDevStereo_32_2" decode="OneChanMono_32_2"/>
+    <scenario encode="OneChanStereo_48_1" decode="OneChanStereo_48_1"/>
+    <scenario encode="OneChanStereo_48_1" decode="OneChanMono_48_1"/>
+    <scenario encode="TwoChanStereo_48_1" decode="OneChanMono_48_1"/>
+    <scenario encode="OneChanMono_48_1" decode="OneChanMono_48_1"/>
+    <scenario encode="TwoChanTwoDevStereo_48_1" decode="TwoChanTwoDevStereo_48_1"/>
+    <scenario encode="TwoChanTwoDevStereo_48_1" decode="OneChanMono_48_1"/>
+    <scenario encode="OneChanStereo_48_2" decode="OneChanStereo_48_2"/>
+    <scenario encode="OneChanStereo_48_2" decode="OneChanMono_48_2"/>
+    <scenario encode="TwoChanStereo_48_2" decode="OneChanMono_48_2"/>
+    <scenario encode="OneChanMono_48_2" decode="OneChanMono_48_2"/>
+    <scenario encode="TwoChanTwoDevStereo_48_2" decode="TwoChanTwoDevStereo_48_2"/>
+    <scenario encode="TwoChanTwoDevStereo_48_2" decode="OneChanMono_48_2"/>
+    <scenario encode="OneChanStereo_48_3" decode="OneChanStereo_48_3"/>
+    <scenario encode="OneChanStereo_48_3" decode="OneChanMono_48_3"/>
+    <scenario encode="TwoChanStereo_48_3" decode="OneChanMono_48_3"/>
+    <scenario encode="OneChanMono_48_3" decode="OneChanMono_48_3"/>
+    <scenario encode="TwoChanTwoDevStereo_48_3" decode="TwoChanTwoDevStereo_48_3"/>
+    <scenario encode="TwoChanTwoDevStereo_48_3" decode="OneChanMono_48_3"/>
+    <scenario encode="OneChanStereo_48_4" decode="OneChanStereo_48_4"/>
+    <scenario encode="OneChanStereo_48_4" decode="OneChanMono_48_4"/>
+    <scenario encode="TwoChanStereo_48_4" decode="OneChanMono_48_4"/>
+    <scenario encode="OneChanMono_48_4" decode="OneChanMono_48_4"/>
+    <scenario encode="TwoChanTwoDevStereo_48_4" decode="TwoChanTwoDevStereo_48_4"/>
+    <scenario encode="TwoChanTwoDevStereo_48_4" decode="OneChanMono_48_4"/>
+    <scenario encode="OneChanStereo_48_5" decode="OneChanStereo_48_5"/>
+    <scenario encode="OneChanStereo_48_5" decode="OneChanMono_48_5"/>
+    <scenario encode="TwoChanStereo_48_5" decode="OneChanMono_48_5"/>
+    <scenario encode="OneChanMono_48_5" decode="OneChanMono_48_5"/>
+    <scenario encode="TwoChanTwoDevStereo_48_5" decode="TwoChanTwoDevStereo_48_5"/>
+    <scenario encode="TwoChanTwoDevStereo_48_5" decode="OneChanMono_48_5"/>
+    <scenario encode="OneChanStereo_48_6" decode="OneChanStereo_48_6"/>
+    <scenario encode="OneChanStereo_48_6" decode="OneChanMono_48_6"/>
+    <scenario encode="TwoChanStereo_48_6" decode="OneChanMono_48_6"/>
+    <scenario encode="OneChanMono_48_6" decode="OneChanMono_48_6"/>
+    <scenario encode="TwoChanTwoDevStereo_48_6" decode="TwoChanTwoDevStereo_48_6"/>
+    <scenario encode="TwoChanTwoDevStereo_48_6" decode="OneChanMono_48_6"/>
+    <!-- broadcast -->
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_8_1"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_8_2"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_16_1"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_16_2"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_24_1"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_24_2"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_32_1"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_32_2"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_48_1"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_48_2"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_48_3"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_48_4"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_48_5"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastStereo_48_6"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_8_1"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_8_2"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_16_1"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_16_2"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_24_1"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_24_2"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_32_1"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_32_2"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_48_1"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_48_2"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_48_3"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_48_4"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_48_5"/>
+    <scenario encode="invalid" decode="invalid" broadcast="BcastMono_48_6"/>
+  </scenarioList>
+  <configurationList>
+    <!-- 8k -->
+    <configuration name="OneChanMono_8_1" codecConfiguration="LC3_8k_1" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_8_1" codecConfiguration="LC3_8k_1" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_8_1" codecConfiguration="LC3_8k_1" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_8_1" codecConfiguration="LC3_8k_1" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <configuration name="OneChanMono_8_2" codecConfiguration="LC3_8k_2" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_8_2" codecConfiguration="LC3_8k_2" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_8_2" codecConfiguration="LC3_8k_2" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_8_2" codecConfiguration="LC3_8k_2" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <!-- 16k -->
+    <configuration name="OneChanMono_16_1" codecConfiguration="LC3_16k_1" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_16_1" codecConfiguration="LC3_16k_1" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_16_1" codecConfiguration="LC3_16k_1" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_16_1" codecConfiguration="LC3_16k_1" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <configuration name="OneChanMono_16_2" codecConfiguration="LC3_16k_2" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_16_2" codecConfiguration="LC3_16k_2" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_16_2" codecConfiguration="LC3_16k_2" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_16_2" codecConfiguration="LC3_16k_2" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <!-- 24k -->
+    <configuration name="OneChanMono_24_1" codecConfiguration="LC3_24k_1" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_24_1" codecConfiguration="LC3_24k_1" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_24_1" codecConfiguration="LC3_24k_1" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_24_1" codecConfiguration="LC3_24k_1" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <configuration name="OneChanMono_24_2" codecConfiguration="LC3_24k_2" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_24_2" codecConfiguration="LC3_24k_2" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_24_2" codecConfiguration="LC3_24k_2" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_24_2" codecConfiguration="LC3_24k_2" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <!-- 32k -->
+    <configuration name="OneChanMono_32_1" codecConfiguration="LC3_32k_1" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_32_1" codecConfiguration="LC3_32k_1" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_32_1" codecConfiguration="LC3_32k_1" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_32_1" codecConfiguration="LC3_32k_1" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <configuration name="OneChanMono_32_2" codecConfiguration="LC3_32k_2" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_32_2" codecConfiguration="LC3_32k_2" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_32_2" codecConfiguration="LC3_32k_2" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_32_2" codecConfiguration="LC3_32k_2" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <!-- 48k -->
+    <configuration name="OneChanMono_48_1" codecConfiguration="LC3_48k_1" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_48_1" codecConfiguration="LC3_48k_1" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_48_1" codecConfiguration="LC3_48k_1" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_48_1" codecConfiguration="LC3_48k_1" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <configuration name="OneChanMono_48_2" codecConfiguration="LC3_48k_2" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_48_2" codecConfiguration="LC3_48k_2" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_48_2" codecConfiguration="LC3_48k_2" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_48_2" codecConfiguration="LC3_48k_2" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <configuration name="OneChanMono_48_3" codecConfiguration="LC3_48k_3" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_48_3" codecConfiguration="LC3_48k_3" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_48_3" codecConfiguration="LC3_48k_3" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_48_3" codecConfiguration="LC3_48k_3" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <configuration name="OneChanMono_48_4" codecConfiguration="LC3_48k_4" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_48_4" codecConfiguration="LC3_48k_4" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_48_4" codecConfiguration="LC3_48k_4" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_48_4" codecConfiguration="LC3_48k_4" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <configuration name="OneChanMono_48_5" codecConfiguration="LC3_48k_5" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_48_5" codecConfiguration="LC3_48k_5" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_48_5" codecConfiguration="LC3_48k_5" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_48_5" codecConfiguration="LC3_48k_5" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+    <configuration name="OneChanMono_48_6" codecConfiguration="LC3_48k_6" strategyConfiguration="MONO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanStereo_48_6" codecConfiguration="LC3_48k_6" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
+    <configuration name="OneChanStereo_48_6" codecConfiguration="LC3_48k_6" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
+    <configuration name="TwoChanTwoDevStereo_48_6" codecConfiguration="LC3_48k_6" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
+
+    <!-- brodcast -->
+    <configuration name="BcastStereo_8_1" codecConfiguration="LC3_8k_1" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_8_2" codecConfiguration="LC3_8k_2" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_16_1" codecConfiguration="LC3_16k_1" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_16_2" codecConfiguration="LC3_16k_2" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_24_1" codecConfiguration="LC3_24k_1" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_24_2" codecConfiguration="LC3_24k_2" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_32_1" codecConfiguration="LC3_32k_1" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_32_2" codecConfiguration="LC3_32k_2" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_48_1" codecConfiguration="LC3_48k_1" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_48_2" codecConfiguration="LC3_48k_2" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_48_3" codecConfiguration="LC3_48k_3" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_48_4" codecConfiguration="LC3_48k_4" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_48_5" codecConfiguration="LC3_48k_5" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastStereo_48_6" codecConfiguration="LC3_48k_6" strategyConfiguration="BROADCAST_STEREO"/>
+    <configuration name="BcastMono_8_1" codecConfiguration="LC3_8k_1" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_8_2" codecConfiguration="LC3_8k_2" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_16_1" codecConfiguration="LC3_16k_1" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_16_2" codecConfiguration="LC3_16k_2" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_24_1" codecConfiguration="LC3_24k_1" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_24_2" codecConfiguration="LC3_24k_2" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_32_1" codecConfiguration="LC3_32k_1" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_32_2" codecConfiguration="LC3_32k_2" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_48_1" codecConfiguration="LC3_48k_1" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_48_2" codecConfiguration="LC3_48k_2" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_48_3" codecConfiguration="LC3_48k_3" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_48_4" codecConfiguration="LC3_48k_4" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_48_5" codecConfiguration="LC3_48k_5" strategyConfiguration="BROADCAST_MONO"/>
+    <configuration name="BcastMono_48_6" codecConfiguration="LC3_48k_6" strategyConfiguration="BROADCAST_MONO"/>
+  </configurationList>
+  <codecConfigurationList>
+    <codecConfiguration name="LC3_8k_1" codec="LC3" samplingFrequency="8000" frameDurationUs="7500" octetsPerCodecFrame="26"/>
+    <codecConfiguration name="LC3_8k_2" codec="LC3" samplingFrequency="8000" frameDurationUs="10000" octetsPerCodecFrame="30"/>
+    <codecConfiguration name="LC3_16k_1" codec="LC3" samplingFrequency="16000" frameDurationUs="7500" octetsPerCodecFrame="30"/>
+    <codecConfiguration name="LC3_16k_2" codec="LC3" samplingFrequency="16000" frameDurationUs="10000" octetsPerCodecFrame="40"/>
+    <codecConfiguration name="LC3_24k_1" codec="LC3" samplingFrequency="24000" frameDurationUs="7500" octetsPerCodecFrame="45"/>
+    <codecConfiguration name="LC3_24k_2" codec="LC3" samplingFrequency="24000" frameDurationUs="10000" octetsPerCodecFrame="60"/>
+    <codecConfiguration name="LC3_32k_1" codec="LC3" samplingFrequency="32000" frameDurationUs="7500" octetsPerCodecFrame="60"/>
+    <codecConfiguration name="LC3_32k_2" codec="LC3" samplingFrequency="32000" frameDurationUs="10000" octetsPerCodecFrame="80"/>
+    <codecConfiguration name="LC3_48k_1" codec="LC3" samplingFrequency="48000" frameDurationUs="7500" octetsPerCodecFrame="75"/>
+    <codecConfiguration name="LC3_48k_2" codec="LC3" samplingFrequency="48000" frameDurationUs="10000" octetsPerCodecFrame="100"/>
+    <codecConfiguration name="LC3_48k_3" codec="LC3" samplingFrequency="48000" frameDurationUs="7500" octetsPerCodecFrame="90"/>
+    <codecConfiguration name="LC3_48k_4" codec="LC3" samplingFrequency="48000" frameDurationUs="10000" octetsPerCodecFrame="120"/>
+    <codecConfiguration name="LC3_48k_5" codec="LC3" samplingFrequency="48000" frameDurationUs="7500" octetsPerCodecFrame="117"/>
+    <codecConfiguration name="LC3_48k_6" codec="LC3" samplingFrequency="48000" frameDurationUs="10000" octetsPerCodecFrame="155"/>
+  </codecConfigurationList>
+  <strategyConfigurationList>
+    <strategyConfiguration name="STEREO_ONE_CIS_PER_DEVICE" audioLocation="STEREO" connectedDevice="2" channelCount="1"/>
+    <strategyConfiguration name="STEREO_TWO_CISES_PER_DEVICE" audioLocation="STEREO" connectedDevice="1" channelCount="2"/>
+    <strategyConfiguration name="STEREO_TWO_CISES_TWO_DEVICES" audioLocation="STEREO" connectedDevice="2" channelCount="2"/>
+    <strategyConfiguration name="MONO_ONE_CIS_PER_DEVICE" audioLocation="MONO" connectedDevice="1" channelCount="1"/>
+    <strategyConfiguration name="BROADCAST_STEREO" audioLocation="STEREO" connectedDevice="0" channelCount="2"/>
+    <strategyConfiguration name="BROADCAST_MONO" audioLocation="MONO" connectedDevice="0" channelCount="1"/>
+  </strategyConfigurationList>
+</leAudioOffloadSetting>

@@ -13,6 +13,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Audio
+TARGET_EXCLUDES_AUDIOFX := true
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc) \
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek
