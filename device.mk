@@ -173,7 +173,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
-     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
+    frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml \
@@ -220,6 +220,20 @@ PRODUCT_PACKAGES += \
     init_connectivity.rc \
     init.recovery.mt6768.rc \
     init.recovery.samsung.rc 
+
+# Samsung
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.product.property_source_order=odm,vendor,product,system_ext,system
+
+PRODUCT_COPY_FILES += \   
+    $(DEVICE_PATH)/configs/galaxy/galaxy.prop:$(TARGET_COPY_OUT_ODM)/etc/galaxy.prop \
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/galaxy/default_wallpaper.jpg:$(TARGET_COPY_OUT_PRODUCT)/media/default_wallpaper.jpg \
+    $(DEVICE_PATH)/configs/galaxy/Homecoming.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Homecoming.ogg \
+    $(DEVICE_PATH)/configs/galaxy/Spaceline.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Spaceline.ogg \
+    $(DEVICE_PATH)/configs/galaxy/Galaxy_Bells.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Galaxy_Bells.ogg \
+    $(DEVICE_PATH)/configs/galaxy/Over_the_Horizon_2024.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Over_the_Horizon_2024.ogg 
 
 # Sensors
 PRODUCT_PACKAGES += \
