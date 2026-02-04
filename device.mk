@@ -94,6 +94,9 @@ PRODUCT_PACKAGES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
+    android.hardware.memtrack-service.mediatek
+
+PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V5-ndk.vendor \
     android.hardware.graphics.common-V6-ndk.vendor \
     android.hardware.graphics.common-V7-ndk.vendor
