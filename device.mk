@@ -55,6 +55,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.common-V2-ndk.vendor \
+    android.hardware.camera.device-V3-ndk.vendor \
+    android.hardware.camera.metadata-V3-ndk.vendor \
+    android.hardware.camera.provider-V3-ndk.vendor 
+
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapmaxfree=12m \
