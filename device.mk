@@ -173,5 +173,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3.vendor 
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-V2-ndk.vendor
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/a05m/a05m-vendor.mk)
