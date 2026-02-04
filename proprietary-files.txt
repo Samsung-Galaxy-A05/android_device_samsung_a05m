@@ -1745,3 +1745,24 @@ vendor/lib64/VP9SecureVdecCA.so
 vendor/lib64/vpp_hdrmeta_handler_plugin.so
 vendor/lib64/libgz_gp_client.so
 vendor/lib64/libgz_uree.so
+
+# Wlan
+vendor/bin/wifiver_info
+vendor/bin/wlan_assistant
+vendor/bin/wmt_launcher
+vendor/bin/wmt_loader
+vendor/bin/netdagent
+vendor/etc/init/wlan_assistant.rc
+vendor/etc/init/netdagent.rc
+vendor/etc/init/networksetting.rc
+vendor/etc/vintf/manifest/CommandService.xml
+vendor/lib64/libwapi.so
+vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
+vendor/lib64/libwifinvramdata.so
+vendor/lib64/libwpa_client.so
+vendor/lib64/libforkexecwrap.so
+vendor/lib64/libofflinedebugdata.so
+vendor/lib64/libifcutils_mtk.so
+vendor/lib64/vendor.mediatek.hardware.clientapi-V1-ndk.so
+vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
+vendor/lib64/vendor.mediatek.hardware.netdagent-V1-ndk.so
