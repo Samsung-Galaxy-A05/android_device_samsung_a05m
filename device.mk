@@ -19,7 +19,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@7.1-impl \
     android.hardware.audio.effect@7.0-impl 
-    
+
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default
@@ -95,9 +95,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
+    android.hardware.health-V3-ndk.vendor \
+    android.hardware.health@2.1-impl.recovery
 
 # Keymint
 PRODUCT_PACKAGES += \
