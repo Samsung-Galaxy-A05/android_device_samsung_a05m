@@ -220,6 +220,7 @@ PRODUCT_PACKAGES += \
     init_connectivity.rc \
     init.recovery.mt6768.rc \
     init.recovery.samsung.rc 
+    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
 # Samsung
 PRODUCT_SYSTEM_PROPERTIES += \
