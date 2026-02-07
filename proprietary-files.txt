@@ -1768,12 +1768,6 @@ vendor/bin/hw/android.hardware.security.keymint-service
 vendor/etc/init/android.hardware.security.keymint-service.rc
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk.so
 
-# Lights
-vendor/bin/hw/android.hardware.lights-service.samsung
-vendor/etc/init/lights-sec.rc
-vendor/etc/vintf/manifest/lights-sec.xml
-vendor/lib64/hw/lights.mt6768.so
-
 # Media
 vendor/lib64/libcodec2_fsr.so
 vendor/lib64/libcodec2_mtk_c2store.so

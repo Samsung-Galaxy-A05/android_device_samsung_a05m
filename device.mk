@@ -112,6 +112,10 @@ PRODUCT_PACKAGES += \
     android.hardware.security.rkp-V1-ndk \
     libkeymaster4_1support.vendor
 
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
+
 # Linker config
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
     $(DEVICE_PATH)/configs/linker.config.json
