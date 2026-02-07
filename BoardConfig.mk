@@ -152,6 +152,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
+# SELinux
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+
 # Security patch level
 VENDOR_SECURITY_PATCH := 2025-10-01
 
