@@ -154,6 +154,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
+include vendor/samsung/a05m-unified/unified-sepolicy.mk
+include vendor/samsung/a05m-lpm/lpm.mk
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2025-10-01

@@ -287,3 +287,5 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/a05m/a05m-vendor.mk)
+$(call inherit-product, vendor/samsung/a05m-lpm/samsung-lpm.mk)
+$(call inherit-product, vendor/samsung/a05m-unified/unified.mk)
