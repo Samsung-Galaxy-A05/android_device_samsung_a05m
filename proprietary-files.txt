@@ -1756,13 +1756,6 @@ vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
 
-# Health
-vendor/bin/hw/vendor.samsung.hardware.health-service
-vendor/etc/init/vendor.samsung.hardware.health-service.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.health-service.xml
-vendor/lib64/vendor.samsung.hardware.health-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.thermal-V1-ndk.so
-
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service
 vendor/etc/init/android.hardware.security.keymint-service.rc
@@ -1971,14 +1964,6 @@ vendor/lib64/libthermalalgo.so
 vendor/bin/hw/android.hardware.usb@1.3-service.coral
 vendor/etc/init/android.hardware.usb@1.3-service.coral.rc
 vendor/etc/vintf/manifest/android.hardware.usb@1.3-service.coral.xml
-
-# Vibrator
-vendor/bin/hw/vendor.samsung.hardware.vibrator-service
-vendor/lib64/hw/vibrator.default.so
-vendor/lib64/hw/vibrator.mt6768.so
-vendor/lib64/vendor.samsung.hardware.vibrator-V5-ndk.so
-vendor/etc/init/vendor.samsung.hardware.vibrator-default.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.vibrator-default.xml
 
 # VPU - from  lamu_g-user 15 VVTA35.51-137 7eabca release-keys
 vendor/bin/v3avpud-64b
