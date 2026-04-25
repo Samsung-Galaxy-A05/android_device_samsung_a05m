@@ -1,4 +1,4 @@
-# Unpinned blobs from a05mxx-user 15 AP3A.240905.015.A2 A055FXXSBDYJ2 release-keys
+# Unpinned blobs from a05mxx-user 15 AP3A.240905.015.A2 A055FXXSFDZD1 release-keys
 
 # AAL
 vendor/lib64/libaal_cust.so
@@ -7,8 +7,8 @@ vendor/lib64/libaal_sec.so
 vendor/lib64/libaalservice.so
 
 # APDB
-vendor/etc/apdb/APDB_MT6768_S01__W2517
-vendor/etc/apdb/APDB_MT6768_S01__W2517_ENUM
+vendor/etc/apdb/APDB_MT6768_S01__W2543
+vendor/etc/apdb/APDB_MT6768_S01__W2543_ENUM
 
 # Audio
 vendor/lib64/hw/audio.primary.mt6768.so
@@ -24,8 +24,10 @@ vendor/lib64/libaudiodcrflt_vendor.so
 vendor/lib64/libaudiofmtconv.so
 vendor/lib64/libaudioloudc.so
 vendor/lib64/libaudioprimarydevicehalifclient.so
+vendor/lib64/libaudiopolicyconfigxml_mtk_vendor.so
 vendor/lib64/libaudiotoolkit_vendor.so
 vendor/lib64/libaurisysdemo.so
+vendor/lib64/libapu_mdw.so
 vendor/lib64/libbessound_hd_mtk_vendor.so
 vendor/lib64/libblisrc32_vendor.so
 vendor/lib64/libbwc.so
@@ -1839,7 +1841,7 @@ vendor/lib64/libccci_util.so
 vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/libmtkcutils.so
 vendor/lib64/libmtkhardware_legacy.so
-vendor/lib64/libmtkisp_metadata_v3.so
+vendor/lib64/libmtkisp_metadata_V3.so
 vendor/lib64/libmtklimiter_vendor.so
 vendor/lib64/libmtknetcap.so
 vendor/lib64/libmtknetutils.so
