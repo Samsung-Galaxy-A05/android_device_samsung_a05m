@@ -1,0 +1,36 @@
+/*
+ * Copyright (C) 2022 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+cc_defaults {
+    name: "android.hardware.health-service.a05m-defaults",
+    defaults: [
+        "libhealth_aidl_impl_user",
+        "libhealth_aidl_charger_defaults",
+    ],
+    relative_install_path: "hw",
+    vintf_fragments: ["android.hardware.health-service.a05m.xml"],
+    srcs: [
+        "Health.cpp",
+    ],
+    static_libs: [
+        "libhealth_aidl_impl",
+    ],
+}
+
+cc_binary {
+    name: "android.hardware.health-service.a05m",
+    defaults: ["android.hardware.health-service.a05m-defaults"],
+    vendor: true,
+    init_rc: ["android.hardware.health-service.a05m.rc"],
+}
+
+cc_binary {
+    name: "android.hardware.health-service.a05m-recovery",
+    defaults: ["android.hardware.health-service.a05m-defaults"],
+    recovery: true,
+    init_rc: ["android.hardware.health-service.a05m-recovery.rc"],
+    overrides: ["charger.recovery"],
+}

@@ -103,8 +103,9 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
+	android.hardware.health-service.a05m \ 
     android.hardware.health-V3-ndk.vendor \
-    android.hardware.health@2.1-impl.recovery
+    android.hardware.health-service.a05m.recovery
 
 # Keymint
 PRODUCT_PACKAGES += \
@@ -225,20 +226,6 @@ PRODUCT_PACKAGES += \
     init.recovery.mt6768.rc \
     init.recovery.samsung.rc 
     $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
-
-# Samsung
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.product.property_source_order=odm,vendor,product,system_ext,system
-
-PRODUCT_COPY_FILES += \   
-    $(DEVICE_PATH)/configs/galaxy/galaxy.prop:$(TARGET_COPY_OUT_ODM)/etc/galaxy.prop \
-
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/galaxy/default_wallpaper.jpg:$(TARGET_COPY_OUT_PRODUCT)/media/default_wallpaper.jpg \
-    $(DEVICE_PATH)/configs/galaxy/Homecoming.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Homecoming.ogg \
-    $(DEVICE_PATH)/configs/galaxy/Spaceline.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/Spaceline.ogg \
-    $(DEVICE_PATH)/configs/galaxy/Galaxy_Bells.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Galaxy_Bells.ogg \
-    $(DEVICE_PATH)/configs/galaxy/Over_the_Horizon_2024.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Over_the_Horizon_2024.ogg 
 
 # Sensors
 PRODUCT_PACKAGES += \
