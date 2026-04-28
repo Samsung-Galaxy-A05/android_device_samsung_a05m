@@ -72,6 +72,13 @@ def blob_fixup_return_1(
 
 
 blob_fixups: blob_fixups_user_type = {
+    (
+        'vendor/lib64/hw/audio.primary.mt6768.so',
+        'vendor/lib64/hw/hwcomposer.mt6768.so',
+        'vendor/lib64/libpqxmlparser.so',
+        'vendor/lib64/libsilkybrightnesscore.so',
+        'vendor/lib64/librt_extamp_intf.so',
+    ): blob_fixup()
 
      'vendor/etc/init/android.hardware.security.skeymint-service.rc': blob_fixup()
         .regex_replace('keymint-service', 'skeymint-service'),   
