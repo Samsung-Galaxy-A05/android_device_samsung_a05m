@@ -1717,6 +1717,7 @@ vendor/lib64/mt6768/libpq_sec.so;SYMLINK=vendor/lib64/libpq_sec.so
 vendor/lib64/mt6768/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so
 vendor/lib64/mt6768/libmmlpqImpl.so;SYMLINK=vendor/lib64/libmmlpqImpl.so
 vendor/lib64/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
+vendor/lib64/mt6768/libmml.so;SYMLINK=vendor/lib64/libmml.so
 vendor/lib64/arm.graphics-V5-ndk.so
 vendor/lib64/arm.mali.platform-V2-ndk.so
 vendor/lib64/libarm_egl_properties_sysprop.so
@@ -1750,7 +1751,6 @@ vendor/lib64/libsilkybrightnesscore.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/libladder.so
-vendor/lib64/libmml.so
 vendor/lib64/libmmprofile.so
 vendor/lib64/vendor.mediatek.hardware.mbrain-V6-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mmlpq-V3-ndk.so
