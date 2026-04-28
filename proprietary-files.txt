@@ -1759,8 +1759,8 @@ vendor/lib64/vendor.mediatek.hardware.composer_ext-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so
 
 # Keymint
-vendor/bin/hw/android.hardware.security.keymint-service
-vendor/etc/init/android.hardware.security.keymint-service.rc
+vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.skeymint-service
+vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.skeymint-service.rc
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk.so
 
 # Media
