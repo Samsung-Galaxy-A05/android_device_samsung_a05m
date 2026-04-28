@@ -103,9 +103,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-	android.hardware.health-service.a05m \ 
     android.hardware.health-V3-ndk.vendor \
-    android.hardware.health-service.a05m.recovery
+    android.hardware.health@2.1-impl.recovery
 
 # Keymint
 PRODUCT_PACKAGES += \
@@ -128,8 +127,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
 
- # OpenCL
- PRODUCT_COPY_FILES += \
+# OpenCL
+PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt   
 
 # Overlays
@@ -225,6 +224,8 @@ PRODUCT_PACKAGES += \
     init_connectivity.rc \
     init.recovery.mt6768.rc \
     init.recovery.samsung.rc 
+
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
 # Sensors
