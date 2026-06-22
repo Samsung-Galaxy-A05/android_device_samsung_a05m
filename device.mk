@@ -3,6 +3,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+DEVICE_PATH := device/samsung/a05m
 
 # Inherit non_ab product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
