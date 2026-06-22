@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/samsung/a05m
 
+# Force any prefer32 targets to be compiled as 64 bit.
+IGNORE_PREFER32_ON_DEVICE := true
+
 # A/B
 AB_OTA_UPDATER := false
 TARGET_OTA_ALLOW_NON_AB := true
