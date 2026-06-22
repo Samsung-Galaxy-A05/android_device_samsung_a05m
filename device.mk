@@ -48,13 +48,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek
 
-# Camera
-PRODUCT_PACKAGES += \
-    android.hardware.camera.common-V2-ndk.vendor \
-    android.hardware.camera.device-V3-ndk.vendor \
-    android.hardware.camera.metadata-V3-ndk.vendor \
-    android.hardware.camera.provider-V3-ndk.vendor 
-
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapmaxfree=12m \
@@ -90,17 +83,11 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss.visibility_control@1.0 \
-    android.hardware.gnss.measurement_corrections@1.1 \
-    android.hardware.sensors-V2-ndk.vendor 
+    android.hardware.gnss.measurement_corrections@1.1
 
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.mediatek
-
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.common-V5-ndk.vendor \
-    android.hardware.graphics.common-V6-ndk.vendor \
-    android.hardware.graphics.common-V7-ndk.vendor
 
 # Health
 PRODUCT_PACKAGES += \
