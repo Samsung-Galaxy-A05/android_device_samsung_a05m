@@ -1756,6 +1756,11 @@ vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.ha
 vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/android.hardware.security.skeymint-service.rc
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk.so
 
+# Media (C2) - from  lamu_g-user 15 VVTA35.51-137 7eabca release-keys
+vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
+vendor/etc/init/android.hardware.media.c2-mediatek-64b.rc
+vendor/etc/vintf/manifest/manifest_media_c2_default.xml:vendor/etc/vintf/manifest/media_c2_mtk.xml
+
 # Media
 vendor/lib64/libcodec2_fsr.so
 vendor/lib64/libcodec2_mtk_c2store.so
