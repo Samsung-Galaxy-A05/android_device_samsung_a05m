@@ -82,6 +82,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/hw/audio.primary.mt6768.so',
     ): blob_fixup()
         .replace_needed('android.hardware.audio.effect-V2-ndk.so', 'android.hardware.audio.effect-V3-ndk.so')
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 
     (
         'vendor/lib64/libcamera2ndk_vendor.so',
@@ -128,7 +129,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libsilkybrightnesscore.so',
         'vendor/lib64/librt_extamp_intf.so',
     ): blob_fixup()
-
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    
      'vendor/etc/init/android.hardware.security.skeymint-service.rc': blob_fixup()
         .regex_replace('keymint-service', 'skeymint-service'), 
         
