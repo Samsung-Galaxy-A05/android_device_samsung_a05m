@@ -19,6 +19,7 @@ TARGET_EXCLUDES_AUDIOFX := true
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@7.1-impl \
+    android.hardware.soundtrigger@2.3-impl \
     android.hardware.audio.effect@7.0-impl 
 
 PRODUCT_PACKAGES += \
@@ -196,6 +197,9 @@ PRODUCT_PACKAGES += \
     sehradiomanager \
     android.hardware.radio.config@1.2 \
     android.hardware.radio@1.5 \
+    vendor.samsung.hardware.radio@2.0 \
+    vendor.samsung.hardware.radio@2.1 \
+    vendor.samsung.hardware.radio@2.2 \
     android.hardware.radio.deprecated@1.0
 
 # Rootdir
