@@ -1743,7 +1743,10 @@ vendor/lib64/libpqhdrmetaparser.so
 vendor/lib64/libpqsharememory.so
 vendor/lib64/libpqtuning.so
 vendor/lib64/libpqxmlparser.so
+vendor/lib64/libprofileparamstorage.so
 vendor/lib64/libsilkybrightnesscore.so
+vendor/lib64/libpixelflinger.so
+vendor/lib64/libminiui.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/libladder.so
@@ -1918,6 +1921,9 @@ vendor/lib64/sensors.grip.so
 vendor/lib64/librgbwlightsensor.so
 vendor/lib64/libsensor_custom.so
 vendor/lib64/libhidparser.so
+
+# SQL
+vendor/lib64/libSQLiteModule_VER_ALL.so
 
 # TeeGris
 vendor/bin/trusty-ut-ctrl
