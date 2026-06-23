@@ -68,8 +68,6 @@ vendor/etc/audio_param/3GVTv2UI_ParamUnitDesc.xml
 vendor/etc/audio_param/3GVTv2_AudioParam.xml
 vendor/etc/audio_param/3GVTv2_ParamTreeView.xml
 vendor/etc/audio_param/3GVTv2_ParamUnitDesc.xml
-vendor/etc/audio_param/AudioParamOptions.xml
-vendor/etc/audio_param/AudioParamOptions_vext.xml
 vendor/etc/audio_param/BtInfo_AudioParam.xml
 vendor/etc/audio_param/BtInfo_ParamUnitDesc.xml
 vendor/etc/audio_param/CRSVolUI_AudioParam.xml
@@ -1210,6 +1208,11 @@ vendor/etc/audio_param_cust/audio_param_swa/VolumeGainMap_AudioParam.xml
 vendor/etc/audio_param_cust/audio_param_swa/VolumeGainMap_ParamUnitDesc.xml
 vendor/etc/audio_param_cust/audio_param_swa/Volume_AudioParam.xml
 vendor/etc/audio_param_cust/audio_param_swa/Volume_ParamUnitDesc.xml
+
+# Audio Param symlink
+vendor/etc/audio_param/AudioParamOptions.xml;SYMLINK=vendor/etc/audio_param_cust/audio_param_swa/AudioParamOptions.xml;SYMLINK=vendor/etc/audio_param_cust/audio_param_sea/AudioParamOptions.xml;SYMLINK=vendor/etc/audio_param_cust/audio_param_mea/AudioParamOptions.xml;SYMLINK=vendor/etc/audio_param_cust/audio_param_la/AudioParamOptions.xml;SYMLINK=vendor/etc/audio_param_cust/audio_param/AudioParamOptions.xml;SYMLINK=vendor/etc/audio_param_cust/audio_param_cis/AudioParamOptions.xml
+vendor/etc/audio_param/AudioParamOptions_vext.xml;SYMLINK=vendor/etc/audio_param_cust/audio_param_swa/AudioParamOptions_vext.xml;SYMLINK=vendor/etc/audio_param_cust/audio_param_sea/AudioParamOptions_vext.xml;SYMLINK=vendor/etc/audio_param_cust/audio_param_la/AudioParamOptions_vext.xml;SYMLINK=vendor/etc/audio_param_cust/audio_param_mea/AudioParamOptions_vext.xml;SYMLINK=vendor/etc/audio_param_cust/audio_param/AudioParamOptions_vext.xml;SYMLINK=vendor/etc/audio_param_cust/audio_param_cis/AudioParamOptions_vext.xml
+
 vendor/etc/preset_default.bin
 vendor/etc/preset_music.bin
 vendor/etc/preset_ringtone.bin
