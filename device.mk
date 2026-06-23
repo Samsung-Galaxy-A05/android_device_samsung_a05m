@@ -200,7 +200,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     fstab.mt6768 \
-    fstab.mt6899.vendor_ramdisk \
+    fstab.mt6768.vendor_ramdisk \
     init.cgroup.rc \
     init.connectivity.common.rc \
     init.connectivity.rc \
