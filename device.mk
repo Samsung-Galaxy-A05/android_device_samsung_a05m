@@ -91,8 +91,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-V3-ndk.vendor \
-    android.hardware.health@2.1-impl.recovery
+	android.hardware.health-service.a05m \
+	android.hardware.health-service.a05m-recovery 
 
 # Keymint
 PRODUCT_PACKAGES += \
