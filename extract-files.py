@@ -31,7 +31,6 @@ namespace_imports = [
     'hardware/mediatek',
     'hardware/mediatek/libaedv',
     'hardware/mediatek/libmtkperf_client',
-    'hardware/lineage/compat',
     'hardware/samsung',
 ]
 
@@ -73,8 +72,57 @@ def blob_fixup_return_1(
 
 
 blob_fixups: blob_fixups_user_type = {
+
+    (
+        'vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.audio.common-V3-ndk.so', 'android.hardware.audio.common-V4-ndk.so'),
+
     (
         'vendor/lib64/hw/audio.primary.mt6768.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.audio.effect-V2-ndk.so', 'android.hardware.audio.effect-V3-ndk.so')
+
+    (
+        'vendor/lib64/libcamera2ndk_vendor.so',
+    ): blob_fixup()
+        .replace_needed('android.frameworks.cameraservice.service-V2-ndk.so', 'android.frameworks.cameraservice.service-V3-ndk.so')
+        .replace_needed('android.frameworks.cameraservice.device-V2-ndk.so', 'android.frameworks.cameraservice.device-V3-ndk.so'),
+
+    (
+        'vendor/bin/mnld',
+        'vendor/lib64/libaalservice.so',
+        'vendor/lib64/libcam.utils.sensorprovider.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.sensors-V2-ndk.so', 'android.hardware.sensors-V3-ndk.so'),
+
+    (
+        'vendor/lib64/libmtkcam_hal_aidl2legacy_common.so',
+        'vendor/lib64/libmtkcam_hal_aidl_common.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.camera.common-V2-ndk.so', 'android.hardware.camera.common-V1-ndk.so'),
+        
+    (
+        'vendor/lib64/libbluetooth_audio_session_aidl_mtk.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.bluetooth.audio-V4-ndk.so', 'android.hardware.bluetooth.audio-V5-ndk.so'),
+
+    (
+        'vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek',
+        'vendor/lib64/egl/libGLES_mali.so',
+        'vendor/lib64/hw/android.hardware.graphics.allocator-V2-mediatek.so',
+        'vendor/lib64/hw/mapper.mediatek.so',
+        'vendor/lib64/libcodec2_fsr.so',
+        'vendor/lib64/libgpud.so',
+        'vendor/lib64/libgui_vendor.so',
+        'vendor/lib64/libmtkcam_grallocutils.so',
+        'vendor/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so',
+        'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so',
+    ): blob_fixup()
+        .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so')
+        .replace_needed('android.hardware.graphics.common-V6-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+
+    (
         'vendor/lib64/hw/hwcomposer.mt6768.so',
         'vendor/lib64/libpqxmlparser.so',
         'vendor/lib64/libsilkybrightnesscore.so',
@@ -82,8 +130,8 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
 
      'vendor/etc/init/android.hardware.security.skeymint-service.rc': blob_fixup()
-        .regex_replace('keymint-service', 'skeymint-service'),   
-    
+        .regex_replace('keymint-service', 'skeymint-service'), 
+        
 }  # fmt: skip
 
 module = ExtractUtilsModule(
