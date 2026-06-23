@@ -1022,6 +1022,10 @@ on property:sys.boot_completed=1
     write /sys/block/dm-4/queue/read_ahead_kb 128
     write /sys/block/dm-5/queue/read_ahead_kb 128
     write /proc/bootprof "0"
+
+	# OTG and USB
+	write /sys/class/usb_notify/usb_control/usb_data_enabled 1
+	write /sys/class/usb_notify/usb_control/usb_sl SUNNY_WORK_MODE    
 	
 service vendor.hwcomposer /vendor/bin/hw/android.hardware.graphics.composer@3.3-service
     class hal animation
