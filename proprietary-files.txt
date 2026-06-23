@@ -47,7 +47,6 @@ vendor/lib64/libmtkspparser_swb.so
 vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/librt_extamp_intf.so
 vendor/lib64/libsdrparser.so
-vendor/lib64/libxlog.so
 vendor/lib64/libspeech_enh_lib.so
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
@@ -1583,12 +1582,10 @@ vendor/lib64/libtensorflowlite.so
 vendor/lib64/libudf.so
 vendor/lib64/libicd_decoder.so
 vendor/lib64/liblpcnr.so
-vendor/lib64/libecoengine.so
 vendor/lib64/libEdgeFilter.so
 vendor/lib64/libeffecthal.base.so
 vendor/lib64/libfeatureiodrv_mem.so
 vendor/lib64/libheichal.so
-vendor/lib64/libheifcapture.so
 vendor/lib64/libstereoinfoaccessor_vsdof.so
 vendor/lib64/libSupperLongExposure.so
 vendor/lib64/vendor.mediatek.hardware.camera.aovservice-V2-ndk.so
@@ -1727,9 +1724,6 @@ vendor/lib64/libcomposer_ext.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdeccfg.so
 vendor/lib64/libDefaultFpsActor.so
-vendor/lib64/libdisplayfeature.so
-vendor/lib64/libdisplayfeatureservice.so
-vendor/lib64/libdlbdsservice.so
 vendor/lib64/libFrameRecord.so
 vendor/lib64/libged.so
 vendor/lib64/libgpu_aux.so
@@ -1743,7 +1737,6 @@ vendor/lib64/libNoFpsActor.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libpq_cust_base.so
 vendor/lib64/libpqhdrmetaparser.so
-vendor/lib64/libpqparamparser.so
 vendor/lib64/libpqsharememory.so
 vendor/lib64/libpqtuning.so
 vendor/lib64/libpqxmlparser.so
@@ -1768,9 +1761,6 @@ vendor/lib64/libcodec2_fsr.so
 vendor/lib64/libcodec2_mtk_c2store.so
 vendor/lib64/libcodec2_mtk_vdec.so
 vendor/lib64/libcodec2_mtk_venc.so
-vendor/lib64/libcodec2_simple_component.so
-vendor/lib64/libcodec2_soft_ac4dec.so
-vendor/lib64/libcodec2_soft_eac3dec.so
 vendor/lib64/libcodec2_vpp_fa_plugin.so
 vendor/lib64/libcodec2_vpp_mi_plugin.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
@@ -1897,7 +1887,6 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude_ship.mediatek.xm
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_30.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_30.xml
 vendor/lib64/libengmode_client.so
-vendor/lib64/libprotobuf-cpp-full-3.9.1.so
 vendor/lib64/libsecnativefeature.so
 vendor/lib64/libSemDataProps.so
 vendor/lib64/libsemnativecarrierfeature.so
@@ -1941,7 +1930,6 @@ vendor/lib64/libskeymint10device.so
 vendor/lib64/libTEECommon.so
 vendor/lib64/libthha.so
 vendor/lib64/libuuid.dylib.so
-vendor/lib64/libuuid.so
 
 # Thermal
 vendor/bin/thermal
@@ -1991,7 +1979,6 @@ vendor/lib64/libvp9dec_sa.ca7.so
 vendor/lib64/libvpu5.so
 vendor/lib64/libvpudv3a_vcodec.so
 vendor/lib64/VP9SecureVdecCA.so
-vendor/lib64/vpp_hdrmeta_handler_plugin.so
 vendor/lib64/libgz_gp_client.so
 vendor/lib64/libgz_uree.so
 
@@ -2015,7 +2002,6 @@ vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 vendor/lib64/libwifinvramdata.so
 vendor/lib64/libwpa_client.so
 vendor/lib64/libforkexecwrap.so
-vendor/lib64/libofflinedebugdata.so
 vendor/lib64/libifcutils_mtk.so
 vendor/lib64/vendor.mediatek.hardware.clientapi-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
