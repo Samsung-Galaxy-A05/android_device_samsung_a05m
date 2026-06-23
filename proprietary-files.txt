@@ -1995,6 +1995,11 @@ vendor/lib64/vpp_hdrmeta_handler_plugin.so
 vendor/lib64/libgz_gp_client.so
 vendor/lib64/libgz_uree.so
 
+# Wi-Fi Service - from  lamu_g-user 15 VVTA35.51-137 7eabca release-keys
+vendor/bin/hw/android.hardware.wifi-service-lazy:vendor/bin/hw/android.hardware.wifi-service-lazy-mediatek
+vendor/etc/init/android.hardware.wifi-service-lazy.rc:vendor/etc/init/android.hardware.wifi-service-lazy-mediatek.rc
+vendor/etc/vintf/manifest/android.hardware.wifi-service.xml:vendor/etc/vintf/manifest/android.hardware.wifi-service-lazy-mediatek.xml
+
 # Wlan
 vendor/bin/wifiver_info
 vendor/bin/wlan_assistant

@@ -268,8 +268,9 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service \
     hostapd \
+    android.hardware.wifi.common-V1-ndk-v34 \
+	android.hardware.wifi-V2-ndk-v34 \
     wpa_supplicant
 
 PRODUCT_COPY_FILES += \
