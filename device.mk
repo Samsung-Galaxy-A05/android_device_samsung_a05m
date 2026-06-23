@@ -118,10 +118,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt   
 
 # Overlays
+DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 PRODUCT_PACKAGES += \
     FrameworksResOverlay \
     LineagePlatfromOverlay \
-    SettingsResOverlayRodin \
     SystemUIResOverlay \
     TetheringOverlay \
     WifiOverlay
