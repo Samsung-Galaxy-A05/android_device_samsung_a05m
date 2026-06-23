@@ -1,0 +1,13 @@
+get_prop(vendor_init, vendor_radio_prop);
+
+dontaudit vendor_init bluetooth_prop:property_service set;
+dontaudit vendor_init proc:dir add_name;
+dontaudit vendor_init proc:file create;
+dontaudit vendor_init sysfs:dir add_name;
+dontaudit vendor_init sysfs:file create;
+dontaudit vendor_init sysfs_devices_system_cpu:dir { add_name create };
+dontaudit vendor_init sysfs_devices_system_cpu:file create;
+dontaudit vendor_init sysfs_transparent_hugepage:file create;
+dontaudit vendor_init sysfs_transparent_hugepage:dir add_name;
+dontaudit vendor_init { default_prop system_prop build_prop }:property_service set;
+dontaudit vendor_init { radio_prop system_prop }:file read;

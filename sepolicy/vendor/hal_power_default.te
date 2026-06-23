@@ -1,0 +1,2 @@
+allow hal_power_default vendor_sysfs_gpu:file { open read write getattr }; 
+allow hal_power_default sysfs_tsp_cmd:file { open read write getattr };

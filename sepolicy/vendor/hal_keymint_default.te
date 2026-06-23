@@ -1,0 +1,19 @@
+# vendor property access
+allow hal_keymint_default vendor_tztsdaemon_prop:file { read getattr map open };
+
+# tz device access
+allow hal_keymint_default tz_user_device:chr_file { ioctl read write getattr lock append map open watch watch_reads };
+
+# /efs
+allow hal_keymint_default efs_file:dir search;
+
+# /mnt/vendor
+allow hal_keymint_default mnt_vendor_file:dir search;
+allow hal_keymint_default mnt_vendor_file:file r_file_perms;
+
+# prov_efs
+allow hal_keymint_default prov_efs_file:dir { ioctl read getattr lock open watch watch_reads search };
+
+allow hal_keymint_default prov_efs_file:file { ioctl read getattr lock map open watch watch_reads };
+
+allow hal_keymint_default prov_efs_file:lnk_file { ioctl read getattr lock map open watch watch_reads };

@@ -1,0 +1,4 @@
+allow hal_vibrator_default input_device:dir { open read getattr search }; 
+allow hal_vibrator_default input_device:chr_file { open read write getattr ioctl }; 
+allow hal_vibrator_default sysfs_vibrator:lnk_file { read getattr }; 
+allow hal_vibrator_default sysfs_vibrator:file { open read write getattr };

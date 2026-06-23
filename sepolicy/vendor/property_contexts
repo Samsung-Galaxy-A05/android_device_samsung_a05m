@@ -1,0 +1,27 @@
+vendor.secureos.               u:object_r:vendor_secureos_prop:s0
+vendor.tzdaemon                u:object_r:vendor_tzdaemon_prop:s0
+vendor.tzts_daemon             u:object_r:vendor_tztsdaemon_prop:s0
+
+# Radio
+ro.vendor.multisim.simslotcount     u:object_r:vendor_radio_prop:s0
+ro.vendor.radio.default_network     u:object_r:vendor_radio_prop:s0
+vendor.ril.product_code             u:object_r:vendor_radio_prop:s0
+
+# RIL
+persist.vendor.cbd.btl_size         u:object_r:vendor_radio_prop:s0
+
+### cbd
+vendor.cbd.                    u:object_r:vendor_cbd_prop:s0
+persist.vendor.cbd.            u:object_r:vendor_radio_prop:s0
+
+### radio
+ro.vendor.multisim.            u:object_r:vendor_radio_prop:s0
+ro.vendor.radio.               u:object_r:vendor_radio_prop:s0
+
+persist.vendor.camera.cam.list 				u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.multicam.list 	    u:object_r:vendor_mtk_camera_prop:s0
+persist.vendor.camera.eeprom.list 			u:object_r:vendor_mtk_camera_prop:s0
+
+persist.vendor.radio.factory_sn         u:object_r:vendor_mtk_radio_prop:s0
+odm.ril.radio.status.                   u:object_r:vendor_mtk_radio_prop:s0
+

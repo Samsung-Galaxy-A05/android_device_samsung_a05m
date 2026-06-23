@@ -1,0 +1,74 @@
+get_prop(rild, vendor_radio_prop)
+get_prop(rild, exported_config_prop)
+get_prop(rild, telephony_config_prop)
+set_prop(rild, vendor_cbd_prop)
+
+# rild access to vendor data files
+allow rild vendor_data_file:file { open read write getattr };
+
+# rild access to device nodes
+
+# rild access to tun device
+allow rild tun_device:chr_file { open read write ioctl getattr };
+
+allow rild vendor_radio_prop:file { read getattr map open }; 
+allow rild exported_config_prop:file { read getattr map open }; 
+allow rild telephony_config_prop:file { read getattr map open }; 
+allow rild vendor_cbd_prop:property_service { set }; 
+allow rild vendor_cbd_prop:file { read getattr map open };
+
+allow rild block_device:dir { search };
+allow rild mnt_vendor_file:dir { getattr search };
+allow rild system_data_file:dir { getattr };
+
+allow rild hal_audio_default:dir { search };
+allow rild hal_audio_default:file { ioctl read getattr lock map open watch watch_reads };
+
+allow rild log_vendor_data_file:dir { ioctl read write getattr lock open watch watch_reads add_name remove_name search }; 
+allow rild log_vendor_data_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
+
+allow rild radio_block_device:blk_file { ioctl read getattr lock map open watch watch_reads };
+
+allow rild drb_device:chr_file { ioctl read write getattr lock append map open watch watch_reads };
+
+allow rild vendor_radio_device:chr_file { ioctl read write getattr lock append map open watch watch_reads };
+
+allow rild radio_vendor_data_file:dir { ioctl read write getattr lock open watch watch_reads add_name remove_name search }; 
+allow rild radio_vendor_data_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
+
+allow rild app_efs_file:dir { ioctl read getattr lock open watch watch_reads search }; 
+allow rild app_efs_file:file { ioctl read write getattr setattr lock append map open watch watch_reads };
+
+allow rild imei_efs_file:dir { ioctl read getattr lock open watch watch_reads search }; 
+allow rild imei_efs_file:file { ioctl read getattr lock map open watch watch_reads };
+
+allow rild prov_efs_file:dir { ioctl read getattr lock open watch watch_reads search }; 
+allow rild prov_efs_file:file { ioctl read getattr lock map open watch watch_reads };
+
+allow rild bin_nv_data_efs_file:file { ioctl read write getattr setattr lock append map unlink open watch watch_reads };
+
+allow rild proc_qtaguid_stat:file { ioctl read getattr lock map open watch watch_reads };
+
+allow rild proc_net:file { ioctl read write getattr lock append map open watch watch_reads };
+
+allow rild property_socket:sock_file { write };
+allow rild init:unix_stream_socket { connectto };
+
+set_prop(rild, vendor_radio_prop)
+set_prop(rild, radio_prop)
+
+dontaudit rild default_prop:file { getattr map open read };
+dontaudit rild system_prop:file { getattr map open read };
+
+###
+allow rild vendor_radio_data_file:dir create_dir_perms;
+allow rild vendor_radio_data_file:file create_file_perms;
+allow rild tun_device:chr_file rw_file_perms;
+allowxperm rild tun_device:chr_file ioctl { 0x54ca 0x54cb };
+allow rild radio_device:chr_file rw_file_perms;
+allow rild radio_device:blk_file r_file_perms;
+allow rild drb_device:chr_file rw_file_perms;
+allow rild self:tun_socket { create relabelfrom relabelto };
+allow rild hal_audio_default:dir search;
+allow rild hal_audio_default:file { read getattr open };
+allow rild mtk_radio_data_file:dir r_dir_perms;

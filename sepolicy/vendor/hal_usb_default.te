@@ -1,0 +1,2 @@
+allow hal_usb_default sysfs_usb_nonplat:dir { read open getattr search }; 
+allow hal_usb_default sysfs_usb_nonplat:file { read open getattr };

@@ -1,0 +1,35 @@
+type secril_config_svc, domain, halserverdomain, hal_telephony, hal_telephony_server;
+type secril_config_svc_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(secril_config_svc)
+
+unix_socket_connect(secril_config_svc, property, init)
+
+get_prop(secril_config_svc, exported_system_prop)
+set_prop(secril_config_svc, radio_prop)
+set_prop(secril_config_svc, vendor_radio_prop)
+
+allow secril_config_svc init:unix_stream_socket connectto;
+allow secril_config_svc property_socket:sock_file write;
+
+allow secril_config_svc secril_config_svc_exec:file { read getattr map execute open entrypoint };
+allow init secril_config_svc_exec:file { read getattr map execute open };
+allow init secril_config_svc:process { transition siginh rlimitinh };
+type_transition init secril_config_svc_exec:process secril_config_svc;
+
+allow secril_config_svc mnt_vendor_file:dir { search getattr };
+allow secril_config_svc efs_file:dir { search };
+allow secril_config_svc efs_file:file { ioctl read getattr lock map open watch watch_reads };
+
+allow secril_config_svc exported_system_prop:file { read getattr map open };
+
+allow secril_config_svc radio_prop:property_service { set };
+allow secril_config_svc radio_prop:file { read getattr map open };
+
+allow secril_config_svc vendor_radio_prop:property_service { set };
+allow secril_config_svc vendor_radio_prop:file { read getattr map open };
+
+dontaudit secril_config_svc default_prop:property_service set;
+dontaudit secril_config_svc radio_control_prop:property_service set;
+dontaudit secril_config_svc radio_prop:property_service set;
+dontaudit secril_config_svc system_prop:file { getattr map open read };
