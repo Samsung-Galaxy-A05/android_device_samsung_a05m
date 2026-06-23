@@ -187,7 +187,11 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Radio
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
+
 PRODUCT_PACKAGES += \
+    sehradiomanager \
     android.hardware.radio.config@1.2 \
     android.hardware.radio@1.5 \
     android.hardware.radio.deprecated@1.0
