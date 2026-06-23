@@ -256,6 +256,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-V2-ndk.vendor
 
+# Vndservice manager
+PRODUCT_PACKAGES += \
+   vndservicemanager \
+   vndservice
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
