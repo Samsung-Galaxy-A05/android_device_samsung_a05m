@@ -132,7 +132,13 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     
      'vendor/etc/init/android.hardware.security.skeymint-service.rc': blob_fixup()
-        .regex_replace('keymint-service', 'skeymint-service'), 
+        .regex_replace('android.hardware.security.keymint-service', 'android.hardware.security.skeymint-service'),   
+
+     'vendor/etc/init/android.hardware.media.c2-mediatek-64b.rc': blob_fixup()
+        .regex_replace('android.hardware.media.c2-mediatek-64b', 'android.hardware.media.c2@1.2-mediatek-64b'),   
+ 
+     'vendor/etc/init/android.hardware.wifi-service-lazy-mediatek.rc': blob_fixup()
+        .regex_replace('android.hardware.wifi-service-lazy', 'android.hardware.wifi-service-lazy-mediatek'), 
         
 }  # fmt: skip
 
