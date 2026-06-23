@@ -47,7 +47,7 @@ vendor/lib64/libmtkspparser_swb.so
 vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/librt_extamp_intf.so
 vendor/lib64/libsdrparser.so
-vendor/lib64/libspeech_enh_lib.so
+vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio-V1-ndk.so
@@ -1234,13 +1234,13 @@ vendor/lib64/libAncDlmk.so
 vendor/lib64/libancbase-beauty.so
 vendor/lib64/libAncBeautify-hal.so
 vendor/lib64/libAncBeautifyImage.so
-vendor/lib64/libANCBeauty.so
+vendor/lib64/libANCBeauty.so;DISABLE_CHECKELF
 
 # Camera BST
 vendor/lib64/libBSTbase_share.so
 vendor/lib64/libBstBaseParams.so
 vendor/lib64/libBSTBeauty.so
-vendor/lib64/libBSTDualCamBokeh.so
+vendor/lib64/libBSTDualCamBokeh.so;DISABLE_CHECKELF
 vendor/lib64/libbsthdr_impl.so
 vendor/lib64/libBSTHDRDETECT.so
 vendor/lib64/libbsthdrdetect_impl.so
@@ -1935,9 +1935,9 @@ vendor/etc/init/teegris.rc
 vendor/lib64/libteecl.so
 vendor/lib64/libskeymint_cli.so
 vendor/lib64/libskeymint10device.so
-vendor/lib64/libTEECommon.so
+vendor/lib64/libTEECommon.so;DISABLE_CHECKELF
 vendor/lib64/libthha.so
-vendor/lib64/libuuid.dylib.so
+vendor/lib64/libuuid.so;MODULE_SUFFIX=_vendor
 
 # Thermal
 vendor/bin/thermal
