@@ -1029,6 +1029,10 @@ on property:sys.boot_completed=1
 
 	# Zram
 	swapon_all /vendor/etc/zram.fstab
+
+    # PowerHint
+    setprop vendor.powerhal.init 1
+
 	
 service vendor.hwcomposer /vendor/bin/hw/android.hardware.graphics.composer@3.3-service
     class hal animation
