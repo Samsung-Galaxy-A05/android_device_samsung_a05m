@@ -1026,6 +1026,9 @@ on property:sys.boot_completed=1
 	# OTG and USB
 	write /sys/class/usb_notify/usb_control/usb_data_enabled 1
 	write /sys/class/usb_notify/usb_control/usb_sl SUNNY_WORK_MODE    
+
+	# Zram
+	swapon_all /vendor/etc/zram.fstab
 	
 service vendor.hwcomposer /vendor/bin/hw/android.hardware.graphics.composer@3.3-service
     class hal animation

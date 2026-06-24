@@ -221,6 +221,7 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     init_connectivity.rc \
     init.recovery.mt6768.rc \
+    zram.fstab \
     init.recovery.samsung.rc 
 
 PRODUCT_COPY_FILES += \

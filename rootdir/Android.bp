@@ -108,5 +108,12 @@ prebuilt_etc {
     name: "fstab.mt6768",
     src: "etc/fstab.mt6768",
     vendor: true,
+	ramdisk_available: true,
     vendor_ramdisk_available: true,
+}
+
+prebuilt_etc {
+    name: "zram.fstab",
+    src: "etc/zram.fstab",
+    vendor: true,
 }
