@@ -12,8 +12,8 @@
 
     <!-- Flag indicating whether we should enable the automatic brightness.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
-    <bool name="config_automatic_brightness_available">true</bool>'
-    '
+    <bool name="config_automatic_brightness_available">true</bool>
+
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
@@ -111,14 +111,6 @@
 
     <!-- Enable pause wallpaper rendering upon state change such as app launch -->
     <bool name="config_pauseWallpaperRenderWhenStateChangeEnabled">true</bool>
-
-    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
-         in hardware. -->
-    <bool name="config_setColorTransformAccelerated">false</bool>
-
-    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
-         in hardware for individual layers. -->
-    <bool name="config_setColorTransformAcceleratedPerLayer">false</bool>
 
     <!-- Flag indicating whether the surface flinger has limited
          alpha compositing functionality in hardware.  If set, the window
@@ -323,7 +315,4 @@
     <!-- The type of the light sensor to be used by the display framework for things like
          auto-brightness. If unset, then it just gets the default sensor of type TYPE_LIGHT. -->
     <string name="config_displayLightSensorType">android.sensor.light</string>
-
-    <string name="config_mainBuiltInDisplayCutout">M 0,0 H -21.33333333333333 V 31.46666666666667 H 21.33333333333333 V 0 H 0 Z @dp</string>
-
 </resources>
