@@ -73,6 +73,10 @@
         <fqname>IATMs/default</fqname>
     </hal>
     <hal format="aidl">
+        <name>vendor.mediatek.hardware.camera.bgservice</name>
+        <fqname>IBGService/default</fqname>
+    </hal>
+    <hal format="aidl">
         <name>vendor.mediatek.hardware.camera.isphal</name>
         <fqname>IISPModule/internal/1</fqname>
     </hal>
