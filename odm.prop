@@ -1,4 +1,1 @@
-####################################
-# from variable PRODUCT_ODM_PROPERTIES
-####################################
-import /odm/etc/galaxy.prop
+# Just empty
