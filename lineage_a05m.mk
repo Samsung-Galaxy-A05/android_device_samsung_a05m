@@ -23,6 +23,5 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="a05mxx-user 15 AP3A.240905.015.A2 A055FXXSBDYJ2 release-keys"
-
-BUILD_FINGERPRINT := samsung/a05mxx/a05m:15/AP3A.240905.015.A2/A055FXXSBDYJ2:user/release-keys
+    BuildDesc="a05mxx-user 15 AP3A.240905.015.A2 A055FXXSBDYJ2 release-keys" \
+    BuildFingerprint="samsung/a05mxx/a05m:15/AP3A.240905.015.A2/A055FXXSBDYJ2:user/release-keys"
