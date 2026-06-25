@@ -192,7 +192,7 @@ include vendor/samsung/a05m-unified/unified-sepolicy.mk
 include vendor/samsung/kpoc_charger/kpoc_charger-sepolicy.mk
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2025-10-01
+VENDOR_SECURITY_PATCH := 2026-06-05
 
 # vendor_boot image
 BOARD_BOOT_HEADER_VERSION := 4
