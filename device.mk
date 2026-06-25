@@ -296,3 +296,5 @@ $(call inherit-product, vendor/samsung/kpoc_charger/kpoc_charger.mk)
 $(call inherit-product, vendor/samsung/a05m-unified/unified.mk)
 # Inherit the sign keys
 $(call inherit-product, vendor/lineage-priv/keys/keys.mk)
+# WingCam-N28
+$(call inherit-product, vendor/samsung/wing-camera/wingcamera-samsung.mk)
