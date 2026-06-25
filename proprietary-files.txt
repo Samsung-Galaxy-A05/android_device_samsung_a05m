@@ -1,4 +1,4 @@
-# Unpinned blobs from a05mxx-user 15 AP3A.240905.015.A2 A055FXXSFDZD1 release-keys
+# Unpinned blobs from a05mxx-user 15 AP3A.240905.015.A2 A055FXXSHDZF1 release-keys
 
 # AAL
 vendor/lib64/libaal_cust.so
