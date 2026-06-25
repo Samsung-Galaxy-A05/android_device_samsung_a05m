@@ -20,7 +20,7 @@
 
 ## Device Picture
 
-![Galaxy A05](https://www.gsmarena.com/samsung_galaxy_a05-pictures-12583.php)
+![Galaxy A05](https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a05.jpg)
 
 ## Status
 - Supported Devices
