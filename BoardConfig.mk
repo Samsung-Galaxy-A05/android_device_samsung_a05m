@@ -182,7 +182,7 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 include vendor/samsung/a05m-unified/unified-sepolicy.mk
-include vendor/samsung/a05m-lpm/lpm.mk
+include vendor/samsung/kpoc_charger/kpoc_charger-sepolicy.mk
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2025-10-01
