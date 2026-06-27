@@ -13,8 +13,8 @@ sh_binary {
 
 // Init scripts
 prebuilt_etc {
-    name: "init.cgroup.rc",
-    src: "etc/init.cgroup.rc",
+    name: "init.power.rc",
+    src: "etc/init.power.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
@@ -48,8 +48,8 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.mt6768.usb.rc",
-    src: "etc/init.mt6768.usb.rc",
+    name: "init.samsung.usb.rc",
+    src: "etc/init.samsung.usb.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
