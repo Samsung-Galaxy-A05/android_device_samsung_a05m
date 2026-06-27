@@ -214,12 +214,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mt6768 \
     fstab.mt6768.vendor_ramdisk \
-    init.cgroup.rc \
+    init.power.rc \
     init.connectivity.common.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6768.rc \
-    init.mt6768.usb.rc \
+    init.samsung.usb.rc \
     init.mtkgki.rc \
     init.project.rc \
     init.sec.rc \
