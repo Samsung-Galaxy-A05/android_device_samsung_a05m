@@ -1,0 +1,93 @@
+/*
+ * Copyright (C) 2021 crDroid Android Project
+ * Copyright (C) 2020 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <fstream>
+#include <string>
+#include <cstring>
+#include <sys/sysinfo.h>
+
+#include <android-base/properties.h>
+#include <libinit_variants.h>
+#include <libinit_utils.h>
+
+#include "vendor_init.h"
+
+using android::base::GetProperty;
+
+void load_mem_properties()
+{
+    char const *heapstartsize;
+    char const *heapgrowthlimit;
+    char const *heapsize;
+    char const *heapminfree;
+    char const *heapmaxfree;
+    char const *heaptargetutilization;
+
+    char const *partialstall;
+    char const *completestall;
+    char const *thrashlim;
+    char const *thrashlimdec;
+    char const *swapfreelow;
+    char const *upressure;
+
+    struct sysinfo sys;
+
+    sysinfo(&sys);
+
+    if (sys.totalram >= 5ull * 1024 * 1024 * 1024) {
+        // from - phone-xhdpi-6144-dalvik-heap.mk
+        heapstartsize = "16m";
+        heapgrowthlimit = "256m";
+        heapsize = "512m";
+        heaptargetutilization = "0.5";
+        heapminfree = "8m";
+        heapmaxfree = "32m";
+        // from lmkd defaults for high perf devices
+        // except completestall, default 700
+        partialstall = "70";
+        completestall = "140";
+        thrashlim = "100";
+        thrashlimdec = "10";
+        swapfreelow = "20";
+        upressure = "50";
+    } else if (sys.totalram >= 3ull * 1024 * 1024 * 1024) {
+        // from - phone-xhdpi-4096-dalvik-heap.mk
+        heapstartsize = "8m";
+        heapgrowthlimit = "192m";
+        heapsize = "512m";
+        heaptargetutilization = "0.6";
+        heapminfree = "8m";
+        heapmaxfree = "16m";
+        // from lmkd defaults for high perf devices
+        // tuned lower, clamped stall
+        partialstall = "80";
+        completestall = "240";
+        thrashlim = "70";
+        thrashlimdec = "20";
+        swapfreelow = "18";
+        upressure = "60";
+        property_override("ro.config.art_lowmem", "true");
+    }
+
+    property_override("dalvik.vm.heapstartsize", heapstartsize);
+    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_override("dalvik.vm.heapsize", heapsize);
+    property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
+    property_override("dalvik.vm.heapminfree", heapminfree);
+    property_override("dalvik.vm.heapmaxfree", heapmaxfree);
+
+    property_override("ro.lmk.psi_partial_stall_ms", partialstall);
+    property_override("ro.lmk.psi_complete_stall_ms", completestall);
+    property_override("ro.lmk.thrashing_limit", thrashlim);
+    property_override("ro.lmk.thrashing_limit_decay", thrashlimdec);
+    property_override("ro.lmk.swap_free_low_percentage", swapfreelow);
+    property_override("ro.lmk.upgrade_pressure", upressure);
+}
+
+void vendor_load_properties() {
+    load_mem_properties();
+}
