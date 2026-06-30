@@ -22,6 +22,16 @@
 
 using android::base::GetProperty;
 
+static void property_override(const char* prop, const char* value, bool add = true)
+{
+    prop_info* pi = (prop_info*)__system_property_find(prop);
+    if (pi) {
+        __system_property_update(pi, value, strlen(value));
+    } else if (add) {
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+    }
+}
+
 void load_mem_properties()
 {
     char const *heapstartsize;
