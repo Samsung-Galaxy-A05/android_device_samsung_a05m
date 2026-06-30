@@ -1691,7 +1691,7 @@ vendor/etc/init/init.gps.rc
 vendor/lib64/hw/gps.default.so
 vendor/lib64/gnss_aidl_lib.so
 vendor/lib64/libDR.so
-vendor/lib64/libmnl.so
+vendor/lib64/libmnl.so:vendor/lib64/libmnl_mtk.so;FIX_SONAME 
 vendor/lib64/vendor.samsung.hardware.gnss-V4-ndk.so
 
 # Graphics
