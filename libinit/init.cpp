@@ -5,15 +5,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#include <cstdlib>
 #include <fstream>
 #include <string>
-#include <cstring>
+#include <unistd.h>
 #include <sys/sysinfo.h>
 
+#include <android-base/logging.h>
 #include <android-base/properties.h>
-#include <libinit_variants.h>
-#include <libinit_utils.h>
 
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
+
+#include "property_service.h"
 #include "vendor_init.h"
 
 using android::base::GetProperty;
