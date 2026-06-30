@@ -53,7 +53,7 @@ BOARD_INIT_BOOT_HEADER_VERSION := 4
 BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_samsung_a05m
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):libinit_samsung_a05m)
 TARGET_RECOVERY_DEVICE_MODULES := libinit_samsung_a05m
 
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
