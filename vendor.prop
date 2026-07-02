@@ -276,6 +276,10 @@ ro.vendor.md_prop_ver=1
 ro.vendor.mtk_md_world_mode_support=1
 ro.vendor.mtk_modem_monitor_support=1
 
+# SEC_RIL
+ro.product_ship=true
+vendor.sec.rild.libpath=\vendor\lib64\libsec-ril.so
+
 # Surfaceflinger
 debug.sf.use_phase_offsets_as_durations=1
 debug.sf.late.sf.duration=27600000
