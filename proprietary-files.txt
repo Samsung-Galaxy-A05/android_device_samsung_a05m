@@ -1962,10 +1962,10 @@ vendor/lib64/hw/thermal_hal.so
 vendor/lib64/libmtcloader.so
 vendor/lib64/libthermalalgo.so
 
-# USB
-vendor/bin/hw/android.hardware.usb@1.3-service.coral
-vendor/etc/init/android.hardware.usb@1.3-service.coral.rc
-vendor/etc/vintf/manifest/android.hardware.usb@1.3-service.coral.xml
+# USB - from - a34x - A346NKSUEFZE6
+vendor\bin\hw\android.hardware.usb-aidl-service.mediatekv1.0
+vendor\etc\init\android.hardware.usb-aidl-service.mediatekv1.0.rc
+vendor\etc\vintf\manifest\android.hardware.usb-aidl-service.mediatekv1.0.xml
 
 # VPU - from  lamu_g-user 15 VVTA35.51-137 7eabca release-keys
 vendor/bin/v3avpud-64b
