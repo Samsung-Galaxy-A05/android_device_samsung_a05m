@@ -136,7 +136,7 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlay \
     LineagePlatfromOverlay \
     SystemUIResOverlay \
-    TetheringOverlay 
+    NcmTetheringOverlay 
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
