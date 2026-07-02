@@ -129,13 +129,14 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt   
 
 # Overlays
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
+
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 PRODUCT_PACKAGES += \
     FrameworksResOverlay \
     LineagePlatfromOverlay \
     SystemUIResOverlay \
-    TetheringOverlay \
-    WifiOverlay
+    TetheringOverlay 
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
