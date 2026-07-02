@@ -72,10 +72,20 @@ def blob_fixup_return_1(
 
 
 blob_fixups: blob_fixups_user_type = {
-    
+
     'vendor/lib64/libsec-ril.so': blob_fixup()
 	.sig_replace('80 0E 40 F9 E1 03 16 AA 82 0C 80 52 E3 03 15 AA',
             '80 0E 40 F9 E1 03 16 AA 82 0C 80 52 08 00 80 D2'),
+
+    (
+        'vendor/bin/hw/android.hardware.audio.service-aidl.mediatek',
+        'vendor/lib64/hw/android.hardware.soundtrigger3-impl.so',
+    ): blob_fixup()
+        .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
+    
+        'vendor/lib64/android.hardware.audio.core-impl-mediatek.so': blob_fixup()
+        .add_needed('libaudioutils_shim.so')
+        .replace_needed('libaudio_aidl_conversion_common_ndk.so', 'libaudio_aidl_conversion_common_ndk_prebuilt.so'),
 
     (
         'vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so',
@@ -129,6 +139,7 @@ blob_fixups: blob_fixups_user_type = {
 
     (
         'vendor/lib64/hw/hwcomposer.mt6768.so',
+        'vendor/lib64/hw/android.hardware.audio.effect.aidl-impl-mediatek.so',
         'vendor/lib64/libpqxmlparser.so',
         'vendor/lib64/libsilkybrightnesscore.so',
         'vendor/lib64/librt_extamp_intf.so',

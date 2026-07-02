@@ -16,25 +16,35 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
-PRODUCT_PACKAGES += \
-    android.hardware.audio.service \
-    android.hardware.audio@7.1-impl \
-    android.hardware.soundtrigger@2.3-impl \
-    android.hardware.audio.effect@7.0-impl 
-
-PRODUCT_PACKAGES += \
-   vendor.mediatek.hardware.bluetooth.audio@2.1.vendor:64 \
-   vendor.mediatek.hardware.bluetooth.audio@2.2.vendor:64
-
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
-    audio.bluetooth.default
 
 PRODUCT_PACKAGES += \
     audio.primary.default \
-    audio.r_submix.default \
+    audio.bluetooth.default \
     audio_policy.stub \
-    audio.usb.default
+    audio.r_submix.default \
+    audio.usb.default \
+    libaudioutils_shim
+
+PRODUCT_PACKAGES += \
+    libaecsw \
+    libagc1sw \
+    libagc2sw \
+    libbassboostsw \
+    libbundleaidl \
+    libdownmixaidl \
+    libdynamicsprocessingaidl \
+    libequalizersw \
+    libhapticgeneratoraidl \
+    libloudnessenhanceraidl \
+    libnssw \
+    libpreprocessingaidl \
+    libpresetreverbsw \
+    libreverbaidl \
+    libspatializersw \
+    libvirtualizersw \
+    libvisualizeraidl \
+    libvolumesw \
+    libextensioneffect
 
 PRODUCT_PACKAGES += \
     MtkInCallService
@@ -48,6 +58,8 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
+
+$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
 # Bluetooth
 PRODUCT_PACKAGES += \
