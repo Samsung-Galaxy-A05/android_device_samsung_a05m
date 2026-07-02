@@ -85,8 +85,9 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.security.keymint-V3-ndk.vendor \
+    android.hardware.gatekeeper-V1-ndk.vendor \
+    libgatekeeper.vendor
 
 # GNSS
 PRODUCT_PACKAGES += \

@@ -1665,8 +1665,9 @@ vendor/bin/fuelgauged
 vendor/bin/fuelgauged_nvram
 vendor/lib64/libfgauge_gm30.so
 
-# Gatekeeper
-vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so
+# Gatekeeper - from a55x - A556EXXSDCZB5
+vendor\bin\hw\android.hardware.gatekeeper-service
+vendor\etc\init\android.hardware.gatekeeper-service.rc
 vendor/lib64/hw/gatekeeper.mt6768.so
 
 # GNSS

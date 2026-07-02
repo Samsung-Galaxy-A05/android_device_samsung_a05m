@@ -19,10 +19,9 @@
         <version>3</version>
         <fqname>ICameraProvider/internal/0</fqname>
     </hal>
-    <hal format="hidl" override="true">
+    <hal format="aidl" override="true">
         <name>android.hardware.gatekeeper</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IGatekeeper/default</fqname>
+        <fqname>IGatekeeper/default</fqname>
     </hal>
     <hal format="aidl">
         <name>android.hardware.gnss</name>
