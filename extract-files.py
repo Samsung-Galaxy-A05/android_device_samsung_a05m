@@ -131,11 +131,6 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 
-    (
-        'vendor/bin/hw/android.hardware.wifi-service-lazy-mediatek',
-    ): blob_fixup()
-        .replace_needed('android.hardware.wifi-V2-ndk.so', 'android.hardware.wifi-V2-ndk-v34.so'),
-
      'vendor/etc/init/android.hardware.security.skeymint-service.rc': blob_fixup()
         .regex_replace('android.hardware.security.keymint-service', 'android.hardware.security.skeymint-service'),   
 

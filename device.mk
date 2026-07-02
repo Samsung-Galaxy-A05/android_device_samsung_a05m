@@ -282,10 +282,11 @@ PRODUCT_PACKAGES += \
    vndservice
 
 # WiFi
+PRODUCT_CFI_INCLUDE_PATHS += hardware/mediatek/wlan/wpa_supplicant_8_lib
+
 PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
     hostapd \
-    android.hardware.wifi.common-V1-ndk-v34 \
-	android.hardware.wifi-V2-ndk-v34 \
     wpa_supplicant
 
 PRODUCT_COPY_FILES += \

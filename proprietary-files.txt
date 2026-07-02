@@ -1994,11 +1994,6 @@ vendor/lib64/VP9SecureVdecCA.so
 vendor/lib64/libgz_gp_client.so
 vendor/lib64/libgz_uree.so
 
-# Wi-Fi Service - from  lamu_g-user 15 VVTA35.51-137 7eabca release-keys
-vendor/bin/hw/android.hardware.wifi-service-lazy:vendor/bin/hw/android.hardware.wifi-service-lazy-mediatek
-vendor/etc/init/android.hardware.wifi-service-lazy.rc:vendor/etc/init/android.hardware.wifi-service-lazy-mediatek.rc
-vendor/etc/vintf/manifest/android.hardware.wifi-service.xml:vendor/etc/vintf/manifest/android.hardware.wifi-service-lazy-mediatek.xml
-
 # Wlan
 vendor/bin/wifiver_info
 vendor/bin/wlan_assistant
@@ -2010,7 +2005,6 @@ vendor/etc/init/netdagent.rc
 vendor/etc/init/networksetting.rc
 vendor/etc/vintf/manifest/CommandService.xml
 vendor/lib64/libwapi.so
-vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 vendor/lib64/libwifinvramdata.so
 vendor/lib64/libwpa_client.so
 vendor/lib64/libforkexecwrap.so
