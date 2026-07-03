@@ -13,7 +13,6 @@ vendor/etc/apdb/APDB_MT6768_S01__W2543_ENUM
 # Audio
 vendor/lib64/hw/audio.primary.mt6768.so
 vendor/lib64/hw/audio.r_submix.mt6768.so
-vendor/lib64/hw/sound_trigger.primary.default.so
 vendor/lib64/libaudio_param_parser-vnd.so
 vendor/lib64/libaudiocompensationfilter_vendor.so
 vendor/lib64/libaudiocompensationfilterc.so
