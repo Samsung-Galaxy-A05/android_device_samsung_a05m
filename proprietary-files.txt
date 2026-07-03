@@ -1604,21 +1604,13 @@ vendor/lib64/libfeatureiodrv_mem.so
 vendor/lib64/libheichal.so
 vendor/lib64/libstereoinfoaccessor_vsdof.so
 vendor/lib64/libSupperLongExposure.so
-vendor/lib64/vendor.mediatek.hardware.camera.aovservice-V2-ndk.so
-vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.uievent-V1-ndk.so
 
 # Chipinfo
 vendor/bin/chipinfo
@@ -1681,6 +1673,8 @@ vendor/lib64/libfgauge_gm30.so
 # Gatekeeper - from a55x - A556EXXSDCZB5
 vendor/bin/hw/android.hardware.gatekeeper-service
 vendor/etc/init/android.hardware.gatekeeper-service.rc
+
+# Gatekeeper
 vendor/lib64/hw/gatekeeper.mt6768.so
 
 # GNSS
@@ -1738,7 +1732,6 @@ vendor/lib64/libarm_egl_properties_sysprop.so
 vendor/lib64/libarm_gralloc_properties_sysprop.so
 vendor/lib64/libarm_mali_config_sysprops.so
 vendor/lib64/libcomposer_ext.so
-vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdeccfg.so
 vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
@@ -1765,7 +1758,6 @@ vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/libladder.so
 vendor/lib64/libmmprofile.so
-vendor/lib64/vendor.mediatek.hardware.mbrain-V6-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mmlpq-V3-ndk.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext-V1-ndk.so
@@ -1851,7 +1843,6 @@ vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/etc/wfd_source_capability.csv
-vendor/lib64/libcarrierconfig.so
 vendor/lib64/libccci_util.so
 vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/libmtkcutils.so
@@ -1878,7 +1869,6 @@ vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.rcs@2.0.so
 vendor/lib64/vendor.mediatek.hardware.rcs-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
 
 # Samsung
 vendor/etc/floating_feature.xml
