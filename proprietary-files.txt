@@ -51,19 +51,19 @@ vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio-V1-ndk.so
 
 # Audio Service AIDL - from lamu_g-user 15 VVTA35.51-137 7eabca release-keys
-vendor/bin/hw/android.hardware.audio.service-aidl.mediatek
-vendor/etc/init/android.hardware.audio.service-aidl.mediatek.rc
-vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.xml:vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.mediatek.xml
-vendor/etc/vintf/manifest/bluetooth_audio.xml:vendor/etc/vintf/manifest/bluetooth_audio_mtk.xml
-vendor/lib64/hw/vendor.mediatek.hardware.audio-impl.so
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
-vendor/lib64/hw/android.hardware.audio.effect.aidl-impl-mediatek.so
-vendor/lib64/hw/android.hardware.soundtrigger3-impl.so
-vendor/lib64/hw/sound_trigger.primary.default.so
-vendor/lib64/android.hardware.audio.core-impl-mediatek.so
-vendor/lib64/android.hardware.bluetooth.audio-impl-mediatek.so
-vendor/lib64/libaudio_aidl_conversion_common_ndk.so:vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so;DISABLE_DEPS;FIX_SONAME
-vendor/lib64/libaudiopolicyconfigxml_mtk_vendor.so
+vendor/bin/hw/android.hardware.audio.service-aidl.mediatek|bc7ee48c48b0e34115dc9e82cfa37b2f7add65b2
+vendor/etc/init/android.hardware.audio.service-aidl.mediatek.rc|0c36ae30602652efddcfb2d2a73def84a24afd05
+vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.xml:vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.mediatek.xml|dfeead0fe267bb6e14a3467f34b1e78a0f671a40
+vendor/etc/vintf/manifest/bluetooth_audio.xml:vendor/etc/vintf/manifest/bluetooth_audio_mtk.xml|bf2e655376c476bfc2e5687715d0cbd23b66f882
+vendor/lib64/hw/vendor.mediatek.hardware.audio-impl.so|c122a150c70657bf31f083f2c3e17eabdee88e60
+vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so|dcc55a612c18d15939ed7c13b1d8aed46e3153ea
+vendor/lib64/hw/android.hardware.audio.effect.aidl-impl-mediatek.so|9a7f3da50c8e74cf7e10d4e79ed57b2a643013da
+vendor/lib64/hw/android.hardware.soundtrigger3-impl.so|a381c6fe3e50c08478a4de0dc5fa0e4311db7a48
+vendor/lib64/hw/sound_trigger.primary.default.so|0d17234bc4003d069c77e14e1ff9f275ae602ec3
+vendor/lib64/android.hardware.audio.core-impl-mediatek.so|b699ef46ff2129ea12e69c605d92c992a4b43089
+vendor/lib64/android.hardware.bluetooth.audio-impl-mediatek.so|bc555d514fb47a340eba8fd6fc59c1693579707b
+vendor/lib64/libaudio_aidl_conversion_common_ndk.so:vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so;DISABLE_DEPS;FIX_SONAME|f9704f2185f0e3fbb9384df67bd8b7a619bc1c1c
+vendor/lib64/libaudiopolicyconfigxml_mtk_vendor.so|34b7d1b9bbc5208243f853bf4f28f917ee914b96
 
 # Audio Configs
 vendor/etc/audio_param/3GVTDV_AudioParam.xml
@@ -1663,16 +1663,16 @@ vendor/firmware/wifi.cfg
 vendor/firmware/WIFI_RAM_CODE_soc1_0_1a_1.bin
 vendor/firmware/WMT_SOC.cfg
 
-# Fuelgauged
-vendor/etc/init/fuelgauged_init.rc
-vendor/etc/init/fuelgauged_nvram_init.rc
-vendor/bin/fuelgauged
-vendor/bin/fuelgauged_nvram
-vendor/lib64/libfgauge_gm30.so
+# Fuelgauged - from  lamu_g-user 15 VVTA35.51-137 7eabca release-keys
+vendor/etc/init/fuelgauged_init.rc|059d27cf33a84a559d45597be9f1f700dbb0d947
+vendor/etc/init/fuelgauged_nvram_init.rc|50d553439d88ac9ee006f5c3f8388f2911ecd38b
+vendor/bin/fuelgauged|862119a2c11b364ed31f4e94818378e6753553de
+vendor/bin/fuelgauged_nvram|d8f02540a0cfae56fcb6c01f75c00085e17317da
+vendor/lib64/libfgauge_gm30.so|8b45d1dff01b7a0ad906d7fa3765c0d567bb13c7
 
 # Gatekeeper - from a55x - A556EXXSDCZB5
-vendor/bin/hw/android.hardware.gatekeeper-service
-vendor/etc/init/android.hardware.gatekeeper-service.rc
+vendor/bin/hw/android.hardware.gatekeeper-service|d44cadcd0d92b6f0629a2ce51894df0af9da8ca6
+vendor/etc/init/android.hardware.gatekeeper-service.rc|49e7c75e37da4e557a5863889916ac6993052e05
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.mt6768.so
@@ -1769,9 +1769,9 @@ vendor/etc/init/android.hardware.security.keymint-service.rc:vendor/etc/init/and
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk.so
 
 # Media (C2) - from  lamu_g-user 15 VVTA35.51-137 7eabca release-keys
-vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
-vendor/etc/init/android.hardware.media.c2-mediatek-64b.rc
-vendor/etc/vintf/manifest/manifest_media_c2_default.xml:vendor/etc/vintf/manifest/media_c2_mtk.xml
+vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b|3d4a7a6064294ff313859520cd75c27cd64a92e1
+vendor/etc/init/android.hardware.media.c2-mediatek-64b.rc|d3a0212f7eefd843a1a1e04aed055da61833deb6
+vendor/etc/vintf/manifest/manifest_media_c2_default.xml:vendor/etc/vintf/manifest/media_c2_mtk.xml|949caf76ef5a13b32f0bc4c5b8aebadb08215ca3
 
 # Media
 vendor/lib64/libcodec2_fsr.so
@@ -1823,7 +1823,6 @@ vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/rcs_volte_stack
 vendor/bin/volte_clientapi_ua
-vendor/bin/volte_rcs_ua
 vendor/etc/command.csv
 vendor/etc/ecc_list.xml
 vendor/etc/ecc_list_OP01.xml
@@ -1867,61 +1866,64 @@ vendor/lib64/libtrm.so
 vendor/lib64/libwpfa.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.rcs@2.0.so
-vendor/lib64/vendor.mediatek.hardware.rcs-V1-ndk.so
+
+# Radio - RCS - from  lamu_g-user 15 VVTA35.51-137 7eabca release-keys 
+vendor/bin/volte_rcs_ua|f13d039915a7a9c95f897b0690ad516748a69a87
+vendor/lib64/vendor.mediatek.hardware.rcs@2.0.so|791782cf1eb50f0957b0c8025c7bb9e190468649
+vendor/lib64/vendor.mediatek.hardware.rcs-V1-ndk.so|154f44bc8401375eb2754039cbe992179f863ffd
 
 # Samsung
 vendor/etc/floating_feature.xml
 
 # Sec RILD - a05mxx-user-14-UP1A.231005.007-A055FXXU4CXF1-release-keys
-vendor/bin/secril_config_svc
-vendor/etc/init/init.vendor.onebinary.rc
-vendor/etc/locale/plmn_delta_eng.bin
-vendor/etc/locale/plmn_delta_zh-rCN.bin
-vendor/etc/locale/plmn_delta_zh-rHK.bin
-vendor/etc/locale/plmn_delta_zh-rTW.bin
-vendor/etc/plmn_delta.bin
-vendor/etc/plmn_delta_attaio.bin
-vendor/etc/plmn_delta_hktw.bin
-vendor/etc/plmn_delta_ltn.bin
-vendor/etc/plmn_delta_usagsm.bin
-vendor/etc/plmn_se13_prebuilt.bin
-vendor/etc/permissions/vendor.samsung.hardware.telephony.cdma_excluded.xml
-vendor/etc/permissions/vendor.samsung.hardware.telephony.gsm.xml
-vendor/etc/permissions/vendor.samsung.hardware.telephony.satellite.xml
-vendor/etc/mtu-conf.xml
-vendor/etc/mvno_list.xml
-vendor/etc/pdpcnt-conf.xml
-vendor/etc/special_pws_channel.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.mediatek.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude_ship.mediatek.xml
-vendor/lib64/libsecnativefeature.so
+vendor/bin/secril_config_svc|9be8a4fe7d1f80fae45a4d1748a415dc7164071b
+vendor/etc/init/init.vendor.onebinary.rc|b3fab964774039b1f2f6eabf821556919b26369f
+vendor/etc/locale/plmn_delta_eng.bin|5a1a2571ac703807da642d09c54a992244fa6654
+vendor/etc/locale/plmn_delta_zh-rCN.bin|b413cb77b463ccd496cfe5af4bdeb49ae8aff357
+vendor/etc/locale/plmn_delta_zh-rHK.bin|360f20bca041e121531118d96b8771e2dfc7ba98
+vendor/etc/locale/plmn_delta_zh-rTW.bin|034e834906858c1349f22eafbbd882b86dbce7d4
+vendor/etc/plmn_delta.bin|6a826cb6a8a1d460403ab2ebccf4f0d7be546ce6
+vendor/etc/plmn_delta_attaio.bin|751a1c7105f1c03fc196689c2a71e2c69aa14e1f
+vendor/etc/plmn_delta_hktw.bin|97a5a4747e8c32d463d8f26254257309b8a03a63
+vendor/etc/plmn_delta_ltn.bin|4a6f44ae57e84394e6f31814f26fc4fcd7d41b62
+vendor/etc/plmn_delta_usagsm.bin|9a25ec9e9da16ed2f8a9db07f037fe08283b24e5
+vendor/etc/plmn_se13_prebuilt.bin|2584d935cca87e96ec7b200b391a1c829a5e7d29
+vendor/etc/permissions/vendor.samsung.hardware.telephony.cdma_excluded.xml|1ce3a35adc85d73d11c8b9bbe81de23a822d3755
+vendor/etc/permissions/vendor.samsung.hardware.telephony.gsm.xml|46f3531c570c371157bc268e6bfbaa3d6d8f2531
+vendor/etc/permissions/vendor.samsung.hardware.telephony.satellite.xml|5ff22ec33a1a26e6fcaf30d506b5ed44a8354033
+vendor/etc/mtu-conf.xml|5bac5f518c1573e774758d2133518cc227134099
+vendor/etc/mvno_list.xml|44d7473f271d51ef5af058798eebb05517808db1
+vendor/etc/pdpcnt-conf.xml|914a3ec45c2f82cca4355b4736e617e1ee644fbe
+vendor/etc/special_pws_channel.xml|c34755567d6ec1ac78bba0be6a7bc3f883960a1a
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.mediatek.xml|c1d0ab589a94ae14990fce37a6ccae30f98e534b
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude_ship.mediatek.xml|a5763b03a29e747f4a7310131564abbcb2230bfe
+vendor/lib64/libsecnativefeature.so|09d553fbb948043a80adcb8824cbbca50eb65086
 
 # Sec RIL - from a14 - A145FXXS8CXJ2
-vendor/bin/hw/rild
-vendor/etc/init/init.vendor.rilcommon.rc
-vendor/etc/init/vendor.samsung.rilchip.slsi.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.slsi.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_33.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_33.xml
-vendor/etc/plmn_delta.bin
-vendor/etc/plmn_delta_hktw.bin
-vendor/etc/plmn_se13.bin
-vendor/lib64/libengmode_client.so
-vendor/lib64/libfloatingfeature.so
-vendor/lib64/libril_sem.so
-vendor/lib64/libsec-ril.so
-vendor/lib64/libsecril-client.so
-vendor/lib64/libSemDataProps.so
-vendor/lib64/libsemnativecarrierfeature.so
-vendor/lib64/libSemTelephonyProps.so
-vendor/lib64/libvkmanager_vendor.so
-vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so
-vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so
+vendor/bin/hw/rild|006374bbdd818b1d6ee83617ddabbf4073974e0e
+vendor/etc/init/init.vendor.rilcommon.rc|eb3115e335457fdc95c854190ee6804e165718f2
+vendor/etc/init/vendor.samsung.rilchip.slsi.rc|95aa52333814b340e5064eae3a9bd5cb8a96a3ff
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.slsi.xml|c3f8ea3f6228f2d572081b0c0ae29a251de4350b
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_33.xml|e9cdde9d05c5cce32f76bbb164437f43b3288157
+vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_33.xml|ebbe359a9b2d78cb88debe79d9183c039afb7c01
+vendor/etc/plmn_delta.bin|6a826cb6a8a1d460403ab2ebccf4f0d7be546ce6
+vendor/etc/plmn_delta_hktw.bin|97a5a4747e8c32d463d8f26254257309b8a03a63
+vendor/etc/plmn_se13.bin|0b18ba4a71df55436a6f0f1c6c6169fc40ca9cae
+vendor/lib64/libengmode_client.so|10a6854e8283b43183f1d659f5fd0e58147bdea3
+vendor/lib64/libfloatingfeature.so|e6eb0fe8cf9ff473249c84d15dac75881c67fae3
+vendor/lib64/libril_sem.so|d5032186f98c1ca5b619cab3bb944c6539fffd99
+vendor/lib64/libsec-ril.so|b04c31880ac2b762732c33127e7e4299ba696a64
+vendor/lib64/libsecril-client.so|cbde0c49fd7812229ef92cabec5d28e331a8cc13
+vendor/lib64/libSemDataProps.so|86a95ebb35d80cc1ec2bdd0f80601787f1ef88ba
+vendor/lib64/libsemnativecarrierfeature.so|fd821eb580a1f57b60cc483169da891376cbbb12
+vendor/lib64/libSemTelephonyProps.so|659466f18732155cbf308c14924135f2e65a3f48
+vendor/lib64/libvkmanager_vendor.so|f1ae353e3cec7c65c401b578202eedcb8a1640b7
+vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so|a324420e0ecab5f08c606f28eb233b68792072c7
+vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so|e44c75cf85ac8f286cce8877544e2df0403579e2
+vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so|9d4b2dddfe22574fabc94231fc47d6a7ec99fcd1
+vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so|23184bdd3a38b864a17cabcd771ee7347da31495
+vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|f89b327cf692da0aba6d4304592b52766b736e24
+vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so|669709f8ff7d3435592c518ad0ba087f42b65606
 
 # Sensors
 vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
@@ -1971,36 +1973,36 @@ vendor/lib64/libmtcloader.so
 vendor/lib64/libthermalalgo.so
 
 # USB - from - a34x - A346NKSUEFZE6
-vendor/bin/hw/android.hardware.usb-aidl-service.mediatekv1.0
-vendor/etc/init/android.hardware.usb-aidl-service.mediatekv1.0.rc
-vendor/etc/vintf/manifest/android.hardware.usb-aidl-service.mediatekv1.0.xml
+vendor/bin/hw/android.hardware.usb-aidl-service.mediatekv1.0|b2459e58eeac66ac152874b12d8c1990ba5880bc
+vendor/etc/init/android.hardware.usb-aidl-service.mediatekv1.0.rc|5f5680016ab0336efc96defbd4c2a567de8128b3
+vendor/etc/vintf/manifest/android.hardware.usb-aidl-service.mediatekv1.0.xml|f0fb7303d9cd2bc9faf475dc2d52390479f7d1d1
 
 # VPU - from  lamu_g-user 15 VVTA35.51-137 7eabca release-keys
-vendor/bin/v3avpud-64b
-vendor/etc/init/v3avpud-64b.rc
-vendor/etc/VideoLog_dynamic.ds
-vendor/lib64/libAVCSecureVencCA.so
-vendor/lib64/AVCSecureVdecCA.so
-vendor/lib64/libh264dec_customize.so
-vendor/lib64/libh264dec_sa.ca7.so
-vendor/lib64/libh264dec_sd.ca7.so
-vendor/lib64/libh264dec_se.ca7.so
-vendor/lib64/libHEVCdec_sa.ca7.android.so
-vendor/lib64/libhevce_sb.ca7.android.so
-vendor/lib64/libmvpu_config_data.so
-vendor/lib64/libmvpu_wrapper.so
-vendor/lib64/libmp4enc_sa.ca7.so
-vendor/lib64/libvcodec_oal.so
-vendor/lib64/libvcodec_utility_v3a.so
-vendor/lib64/libvcodecdrv_header_stub.so
-vendor/lib64/libvcodecdrv_v3a.so
-vendor/lib64/libvp8dec_sa.ca7.so
-vendor/lib64/libvp9dec_sa.ca7.so
-vendor/lib64/libvpu5.so
-vendor/lib64/libvpudv3a_vcodec.so
-vendor/lib64/VP9SecureVdecCA.so
-vendor/lib64/libgz_gp_client.so
-vendor/lib64/libgz_uree.so
+vendor/bin/v3avpud-64b|74d44c29eec6412b13f0736bff0998d56d63ef6d
+vendor/etc/init/v3avpud-64b.rc|725a9be947d9def93b4f83ddae06503b16e9714c
+vendor/etc/VideoLog_dynamic.ds|9de40a9e21b9d92bc61cc5a4cf01fdcab98d14af
+vendor/lib64/libAVCSecureVencCA.so|8bc17d04bebdeae2651233b47776df395db1babd
+vendor/lib64/AVCSecureVdecCA.so|89596d2f18777055352798edcd600ec217d0bab5
+vendor/lib64/libh264dec_customize.so|0005b346ec23aaec1a7966fef981f2c3c7c58e99
+vendor/lib64/libh264dec_sa.ca7.so|9376e66b19d844a315a2297d9827d609594d7884
+vendor/lib64/libh264dec_sd.ca7.so|1688554db0ba1558fc0873b1d00c1d515a13e84d
+vendor/lib64/libh264dec_se.ca7.so|9a224f3b22f7a3ae1ee34c5f428bfdf87f6d01c3
+vendor/lib64/libHEVCdec_sa.ca7.android.so|74c12a06d2e0bd43205f766d4ad7e608d9932a1d
+vendor/lib64/libhevce_sb.ca7.android.so|5be37f6d6b20d4d5308188cf27b632b34e0a0a3a
+vendor/lib64/libmvpu_config_data.so|385f9c8f49c828da6c9554cb95a778b5d1a9cca0
+vendor/lib64/libmvpu_wrapper.so|6e74fdb2346c0f7ce7976fe927f6c4455711fa39
+vendor/lib64/libmp4enc_sa.ca7.so|60d590d0826f9635bc3cf9fde79221616b75f953
+vendor/lib64/libvcodec_oal.so|2adc4a6880b98b9a7ebd1cc26523ba4506d235bb
+vendor/lib64/libvcodec_utility_v3a.so|77a98110b4bd4f8891721add6c34b3b81afcc825
+vendor/lib64/libvcodecdrv_header_stub.so|64efa6517fdb63b7a6b1bacd7209fe3bb59ac295
+vendor/lib64/libvcodecdrv_v3a.so|6a7ed6e8c06556e483c5ea265bf97e3ed4311199
+vendor/lib64/libvp8dec_sa.ca7.so|d648dfd2986e015b5e273761c87a275dd30dca6f
+vendor/lib64/libvp9dec_sa.ca7.so|2790ba96b770be695f45f76e34de30b6d960bd6d
+vendor/lib64/libvpu5.so|191db4da6f093fa8c4e5e5c02fda76893379f9dd
+vendor/lib64/libvpudv3a_vcodec.so|ee3c5996df91abfec37a24a775eed36d51708b8a
+vendor/lib64/VP9SecureVdecCA.so|35d157ddc44d6f01cf82e88eadfb5be3bc1f751c
+vendor/lib64/libgz_gp_client.so|26b771402f1059a128f96197fc5913ddb13d8163
+vendor/lib64/libgz_uree.so|488fa6c428ad8facdd6ece09841bc983f72a9067
 
 # Wlan
 vendor/bin/wifiver_info
