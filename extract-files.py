@@ -121,7 +121,15 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libbluetooth_audio_session_aidl_mtk.so',
     ): blob_fixup()
         .replace_needed('android.hardware.bluetooth.audio-V4-ndk.so', 'android.hardware.bluetooth.audio-V5-ndk.so'),
-
+    (
+        'vendor/lib64/libcodec2_mtk_venc.so',
+        'vendor/lib64/libcodec2_mtk_vdec.so',
+    ): blob_fixup()
+        .replace_needed('libformatter.so', 'libformatter_mtk.so'),
+    (
+        'vendor/lib64/libformatter_mtk.so',
+    ): blob_fixup()
+        .fix_soname(),
     (
         'vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek',
         'vendor/lib64/egl/libGLES_mali.so',
