@@ -2,7 +2,7 @@
      SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<compatibility-matrix version="2.0" type="framework">
+<compatibility-matrix version="9.0" type="framework">
     <hal format="aidl" optional="true">
         <name>vendor.samsung.hardware.bluetooth.audio</name>
         <version>1-2</version>
