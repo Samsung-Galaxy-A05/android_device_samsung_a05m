@@ -330,7 +330,6 @@ vendor.mtk.vdec.decode.error.handle.mode=3
 ro.vendor.mtk_sec_video_path_support=1
 
 # Wlan
-ro.vendor.wifi.sap.interface=swlan0
 ro.vendor.wlan.standalone.log=y
 ro.vendor.wlan.gen=gen4m_6768
 ro.vendor.wlan.chrdev=wmt_chrdev_wifi
