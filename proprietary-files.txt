@@ -51,20 +51,30 @@ vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio-V1-ndk.so
 
 # Audio Service AIDL - from lamu_g-user 15 VVTA35.51-137 7eabca release-keys
-vendor/bin/hw/android.hardware.audio.service-aidl.mediatek|bc7ee48c48b0e34115dc9e82cfa37b2f7add65b2
-vendor/etc/init/android.hardware.audio.service-aidl.mediatek.rc|0c36ae30602652efddcfb2d2a73def84a24afd05
-vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.xml:vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.mediatek.xml|dfeead0fe267bb6e14a3467f34b1e78a0f671a40
-vendor/etc/vintf/manifest/android.hardware.audio.effect.service-aidl.xml:vendor/etc/vintf/manifest/android.hardware.effect.service-aidl.mediatek.xml|23a35e805568569988ddad64843e5aa87e6af7b4
-vendor/etc/vintf/manifest/bluetooth_audio.xml:vendor/etc/vintf/manifest/bluetooth_audio_mtk.xml|bf2e655376c476bfc2e5687715d0cbd23b66f882
-vendor/lib64/hw/vendor.mediatek.hardware.audio-impl.so|c122a150c70657bf31f083f2c3e17eabdee88e60
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so|dcc55a612c18d15939ed7c13b1d8aed46e3153ea
-vendor/lib64/hw/android.hardware.audio.effect.aidl-impl-mediatek.so|9a7f3da50c8e74cf7e10d4e79ed57b2a643013da
-vendor/lib64/hw/android.hardware.soundtrigger3-impl.so|a381c6fe3e50c08478a4de0dc5fa0e4311db7a48
-vendor/lib64/hw/sound_trigger.primary.default.so|0d17234bc4003d069c77e14e1ff9f275ae602ec3
-vendor/lib64/android.hardware.audio.core-impl-mediatek.so|b699ef46ff2129ea12e69c605d92c992a4b43089
-vendor/lib64/android.hardware.bluetooth.audio-impl-mediatek.so|bc555d514fb47a340eba8fd6fc59c1693579707b
-vendor/lib64/libaudio_aidl_conversion_common_ndk.so:vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so;DISABLE_DEPS;FIX_SONAME|f9704f2185f0e3fbb9384df67bd8b7a619bc1c1c
+vendor/bin/hw/android.hardware.audio.service-aidl.mediatek
+vendor/etc/init/android.hardware.audio.service-aidl.mediatek.rc
+vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.xml:vendor/etc/vintf/manifest/android.hardware.audio.service-aidl.mediatek.xml
+vendor/etc/vintf/manifest/bluetooth_audio.xml:vendor/etc/vintf/manifest/bluetooth_audio_mtk.xml
+vendor/etc/vintf/manifest/android.hardware.audio.effect.service-aidl.xml:vendor/etc/vintf/manifest/android.hardware.effect.service-aidl.mediatek.xml
+vendor/lib64/hw/vendor.mediatek.hardware.audio-impl.so
+vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
+vendor/lib64/hw/android.hardware.audio.effect.aidl-impl-mediatek.so
+vendor/lib64/hw/android.hardware.soundtrigger3-impl.so
+vendor/lib64/hw/sound_trigger.primary.default.so
+vendor/lib64/android.hardware.audio.core-impl-mediatek.so
+vendor/lib64/android.hardware.bluetooth.audio-impl-mediatek.so
+vendor/lib64/libaudio_aidl_conversion_common_ndk.so:vendor/lib64/libaudio_aidl_conversion_common_ndk_prebuilt.so;DISABLE_DEPS;FIX_SONAME
 vendor/lib64/libaudiopolicyconfigxml_mtk_vendor.so|34b7d1b9bbc5208243f853bf4f28f917ee914b96
+
+# Audio aidl prebuilt ndk
+vendor/lib64/android.hardware.audio.common-V3-ndk_mtk.so;DISABLE_DEPS;DISABLE_CHECKELF          
+vendor/lib64/android.hardware.bluetooth.audio-V4-ndk_mtk.so;DISABLE_DEPS;DISABLE_CHECKELF
+vendor/lib64/android.hardware.audio.core-V2-ndk_mtk.so;DISABLE_DEPS;DISABLE_CHECKELF            
+vendor/lib64/android.hardware.soundtrigger3-V2-ndk_mtk.so;DISABLE_DEPS;DISABLE_CHECKELF
+vendor/lib64/android.hardware.audio.core.sounddose-V2-ndk_mtk.so;DISABLE_DEPS;DISABLE_CHECKELF  
+vendor/lib64/android.media.audio.common.types-V3-ndk_mtk.so;DISABLE_DEPS;DISABLE_CHECKELF
+vendor/lib64/android.hardware.audio.effect-V2-ndk_mtk.so;DISABLE_DEPS;DISABLE_CHECKELF          
+vendor/lib64/android.media.soundtrigger.types-V2-ndk_mtk.so;DISABLE_DEPS;DISABLE_CHECKELF
 
 # Audio Configs
 vendor/etc/audio_param/3GVTDV_AudioParam.xml
@@ -1612,7 +1622,6 @@ vendor/lib64/vendor.mediatek.hardware.camera.isphal-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
-
 # Chipinfo
 vendor/bin/chipinfo
 vendor/etc/init/chipinfo_init.rc
@@ -1783,7 +1792,7 @@ vendor/lib64/libcodec2_vpp_fa_plugin.so
 vendor/lib64/libcodec2_vpp_mi_plugin.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
-vendor/lib64/libformatter.so:vendor/lib64/libformatter_mtk.so
+vendor/lib64/libformatter.so:vendor/lib64/libformatter_mtk.so;FIX_SONAME
 
 # MMAgent
 vendor/bin/hw/vendor.mediatek.hardware.mmagent-service
@@ -1935,6 +1944,11 @@ vendor/lib64/libhidparser.so
 # SQL
 vendor/lib64/libSQLiteModule_VER_ALL.so
 
+# USB - from - a34x - A346NKSUEFZE6
+vendor/bin/hw/android.hardware.usb-aidl-service.mediatekv1.0|b2459e58eeac66ac152874b12d8c1990ba5880bc
+vendor/etc/init/android.hardware.usb-aidl-service.mediatekv1.0.rc|5f5680016ab0336efc96defbd4c2a567de8128b3
+vendor/etc/vintf/manifest/android.hardware.usb-aidl-service.mediatekv1.0.xml|f0fb7303d9cd2bc9faf475dc2d52390479f7d1d1
+
 # TeeGris
 vendor/bin/trusty-ut-ctrl
 vendor/bin/tzdaemon
@@ -1970,11 +1984,6 @@ vendor/etc/init/init.thermalloadalgod.rc
 vendor/lib64/hw/thermal_hal.so
 vendor/lib64/libmtcloader.so
 vendor/lib64/libthermalalgo.so
-
-# USB - from - a34x - A346NKSUEFZE6
-vendor/bin/hw/android.hardware.usb-aidl-service.mediatekv1.0|b2459e58eeac66ac152874b12d8c1990ba5880bc
-vendor/etc/init/android.hardware.usb-aidl-service.mediatekv1.0.rc|5f5680016ab0336efc96defbd4c2a567de8128b3
-vendor/etc/vintf/manifest/android.hardware.usb-aidl-service.mediatekv1.0.xml|f0fb7303d9cd2bc9faf475dc2d52390479f7d1d1
 
 # VPU - from  lamu_g-user 15 VVTA35.51-137 7eabca release-keys
 vendor/bin/v3avpud-64b|74d44c29eec6412b13f0736bff0998d56d63ef6d
