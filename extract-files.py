@@ -161,27 +161,6 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 
-    (
-        'vendor/lib64/hw/android.hardware.audio.effect.aidl-impl-mediatek.so',
-        'vendor/bin/hw/android.hardware.audio.service-aidl.mediatek',
-        'vendor/lib64/android.hardware.audio.core-impl-mediatek.so',
-    ): blob_fixup()
-        .replace_needed('android.media.audio.common.types-V3-ndk.so', 'android.media.audio.common.types-V4-ndk.so'),
-		
-    (
-        'vendor/lib64/android.hardware.audio.core-impl-mediatek.so',
-        'vendor/lib64/android.hardware.bluetooth.audio-impl-mediatek.so',
-        'vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so',
-        'vendor/bin/hw/android.hardware.audio.service-aidl.mediatek',
-    ): blob_fixup()
-        .replace_needed('android.hardware.bluetooth.audio-V4-ndk.so', 'android.hardware.bluetooth.audio-V5-ndk.so'),
-
-    (
-        'vendor/bin/hw/android.hardware.audio.service-aidl.mediatek',
-        'vendor/lib64/android.hardware.audio.core-impl-mediatek.so',
-    ): blob_fixup()
-        .replace_needed('android.media.audio.common.types-V3-ndk.so', 'android.media.audio.common.types-V4-ndk.so'),   	
-
      'vendor/etc/init/android.hardware.security.skeymint-service.rc': blob_fixup()
         .regex_replace('android.hardware.security.keymint-service', 'android.hardware.security.skeymint-service'),   
 
