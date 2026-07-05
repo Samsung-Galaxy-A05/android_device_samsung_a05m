@@ -3,7 +3,7 @@
 /vendor/bin/hw/android\.hardware\.graphics\.allocator-V2-service-mediatek 	u:object_r:hal_graphics_allocator_default_exec:s0
 /vendor/bin/hw/vendor\.mediatek\.hardware\.mms-service 						u:object_r:mtk_hal_mms_exec:s0
 /vendor/bin/hw/android\.hardware\.sensors-service\.samsung-multihal 		u:object_r:hal_sensors_default_exec:s0
-/vendor/bin/hw/android\.hardware\.thermal-service\.pixel			 		u:object_r:hal_thermal_default_exec:s0
+/vendor/bin/hw/android\.hardware\.thermal-service\.mediatek			 		u:object_r:hal_thermal_default_exec:s0
 /vendor/bin/hw/android\.hardware\.usb-aidl-service\.mediatekv1\.0           u:object_r:hal_usb_default_exec:s0
 /vendor/bin/hw/android\.hardware\.health-service\.a05m 						u:object_r:hal_health_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service 					u:object_r:hal_vibrator_default_exec:s0
