@@ -41,9 +41,6 @@
         <name>android.hardware.radio.network</name>
     </hal>
     <hal format="aidl" override="true">
-        <name>android.hardware.radio.sap</name>
-    </hal>
-    <hal format="aidl" override="true">
         <name>android.hardware.radio.sim</name>
     </hal>
     <hal format="aidl" override="true">
