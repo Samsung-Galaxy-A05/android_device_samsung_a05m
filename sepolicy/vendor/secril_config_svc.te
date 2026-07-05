@@ -18,6 +18,8 @@ allow init secril_config_svc:process { transition siginh rlimitinh };
 type_transition init secril_config_svc_exec:process secril_config_svc;
 
 allow secril_config_svc mnt_vendor_file:dir { search getattr };
+allow secril_config_svc mnt_vendor_file:file { open read getattr map };
+
 allow secril_config_svc efs_file:dir { search };
 allow secril_config_svc efs_file:file { ioctl read getattr lock map open watch watch_reads };
 
@@ -33,3 +35,4 @@ dontaudit secril_config_svc default_prop:property_service set;
 dontaudit secril_config_svc radio_control_prop:property_service set;
 dontaudit secril_config_svc radio_prop:property_service set;
 dontaudit secril_config_svc system_prop:file { getattr map open read };
+

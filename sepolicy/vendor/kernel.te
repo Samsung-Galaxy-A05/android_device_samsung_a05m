@@ -1,0 +1,2 @@
+allow kernel efs_file:dir { open read search getattr };
+allow kernel self:capability net_bind_service;

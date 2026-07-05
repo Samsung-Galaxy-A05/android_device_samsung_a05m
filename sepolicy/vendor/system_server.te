@@ -1,0 +1,3 @@
+allow system_server sysfs_extcon_usb:dir search;
+allow system_server sysfs_extcon_usb:file { open read getattr };
+allow system_server proc_irq:dir search;

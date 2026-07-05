@@ -1,5 +1,3 @@
-# file.te
-
 # DATA
 type tee_vendor_data_file, file_type, data_file_type;
 
@@ -28,5 +26,11 @@ type vendor_radio_data_file, file_type, data_file_type;
 # GPU
 type vendor_sysfs_gpu, fs_type, sysfs_type;
 
-# GPU
+# DT2W
 type sysfs_tsp_cmd, fs_type, sysfs_type;
+
+# Sensors
+type sysfs_grip_sensor, sysfs_type, fs_type;
+
+# Extcon
+type sysfs_extcon_usb, sysfs_type, fs_type;

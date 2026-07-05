@@ -1,0 +1,2 @@
+allow mtk_wmt_launcher vendor_mtk_firmware:property_service set;
+allow mtk_wmt_launcher vendor_mtk_firmware:file { open read getattr map };

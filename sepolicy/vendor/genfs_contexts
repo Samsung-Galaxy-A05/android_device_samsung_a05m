@@ -1,8 +1,22 @@
 # genfs_contexts
 genfscon sysfs /devices/platform/regulator-vibrator/leds/vibrator   	 u:object_r:sysfs_vibrator:s0
 
+# GPU
 genfscon sysfs /kernel/gpu/gpu_min_clock   								 u:object_r:vendor_sysfs_gpu:s0
 genfscon sysfs /kernel/gpu/gpu_max_clock   								 u:object_r:vendor_sysfs_gpu:s0
 genfscon sysfs /devices/platform/13040000.mali/js_ctx_scheduling_mode    u:object_r:vendor_sysfs_gpu:s0
 genfscon sysfs /devices/platform/13040000.mali/js_scheduling_period   	 u:object_r:vendor_sysfs_gpu:s0
 genfscon sysfs /devices/platform/13040000.mali/dvfs_period   	 		 u:object_r:vendor_sysfs_gpu:s0
+
+# Sensors
+genfscon sysfs /devices/virtual/input/input3/grip_sensor 				 u:object_r:sysfs_grip_sensor:s0
+
+# Extcon
+genfscon sysfs /devices/platform/extcon_usb/extcon/extcon0 		         u:object_r:sysfs_extcon_usb:s0
+genfscon sysfs /devices/platform/extcon_usb/extcon/extcon0/cable.1       u:object_r:sysfs_extcon_usb:s0
+
+# Battery
+genfscon sysfs /devices/platform/11004000.i2c/i2c-7/7-006d/power_supply 										  u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/11004000.i2c/i2c-7/7-006b/power_supply  										  u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-gauge/power_supply/mtk-gauge    u:object_r:sysfs_batteryinfo:s0
+

@@ -1,0 +1,4 @@
+allow mtk_hal_camera fwk_sensor_service:service_manager find;
+allow mtk_hal_camera mtk_camera_postproc_service:service_manager { add find };
+dontaudit rild default_prop:file { getattr map open read };
+dontaudit rild system_prop:file { getattr map open read };
