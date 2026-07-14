@@ -1,0 +1,2 @@
+# TEEGris
+allow init vendor_file:dir mounton;

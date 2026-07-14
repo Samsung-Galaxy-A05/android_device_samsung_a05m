@@ -36,7 +36,6 @@
 - android_device_samsung_a05m 
 - android_device_samsung_a05m-kernel
 - android_vendor_samsung_a05m
-- android_vendor_samsung_a05m-unified
 - android_vendor_samsung_a05m-tee
 - android_vendor_samsung_kpoc_charger
 - android_vendor_samsung_wing-camera

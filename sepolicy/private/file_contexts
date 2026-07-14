@@ -1,0 +1,2 @@
+# Basic tee
+/vendor/tee(/.*)?                         			 	  u:object_r:vendor_file:s0
