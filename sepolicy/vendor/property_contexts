@@ -11,11 +11,11 @@ vendor.ril.product_code             u:object_r:vendor_radio_prop:s0
 # RIL
 persist.vendor.cbd.btl_size         u:object_r:vendor_radio_prop:s0
 
-# cbd
+# CBD
 vendor.cbd.                    u:object_r:vendor_cbd_prop:s0
 persist.vendor.cbd.            u:object_r:vendor_radio_prop:s0
 
-### radio
+# Radio
 ro.vendor.multisim.            u:object_r:vendor_radio_prop:s0
 ro.vendor.radio.               u:object_r:vendor_radio_prop:s0
 
@@ -26,6 +26,14 @@ persist.vendor.camera.eeprom.list 			u:object_r:vendor_mtk_camera_prop:s0
 persist.vendor.radio.factory_sn         u:object_r:vendor_mtk_radio_prop:s0
 odm.ril.radio.status.                   u:object_r:vendor_mtk_radio_prop:s0
 
-# firmware
+# Firmware
 vendor.bluetooth_fw_ver                 u:object_r:vendor_mtk_firmware:s0
 vendor.wifi_fw_ver                      u:object_r:vendor_mtk_firmware:s0
+
+# WingCam
+demo.hole               u:object_r:vendor_camera_prop:s0
+demo.near               u:object_r:vendor_camera_prop:s0
+demo.far                u:object_r:vendor_camera_prop:s0
+demo.fb                 u:object_r:vendor_camera_prop:s0
+service.camera.client   u:object_r:vendor_camera_prop:s0
+ro.csc.countryiso_code  u:object_r:vendor_csc_prop:s0
