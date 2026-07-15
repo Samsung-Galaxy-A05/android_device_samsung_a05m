@@ -146,7 +146,7 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlay \
     LineagePlatfromOverlay \
     SystemUIResOverlay \
-    NcmTetheringOverlay \
+    TetheringOverlay \
     WifiOverlay
 
 # Partitions
