@@ -114,8 +114,8 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-	android.hardware.health-service.a05m \
-	android.hardware.health-service.a05m-recovery 
+    android.hardware.health-service.samsung \
+    android.hardware.health-service.samsung-recovery
 
 # Keymint
 PRODUCT_PACKAGES += \
