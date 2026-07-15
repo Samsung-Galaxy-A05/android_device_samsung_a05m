@@ -49,6 +49,9 @@ ro.mtk_cam_stereo_camera_support=1
 persist.vendor.radio.smart.data.switch=1
 ro.vendor.mtk_camera_app_version=3
 
+# Dalvik
+dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
+
 # DRM
 drm.service.enabled=true
 ro.vendor.mtk_widevine_drm_l1_support=1
