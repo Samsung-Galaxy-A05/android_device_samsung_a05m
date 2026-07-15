@@ -71,6 +71,7 @@ void load_mem_properties()
         thrashlimdec = "20";
         swapfreelow = "18";
         upressure = "60";
+        property_override("ro.config.art_lowmem", "true");
     }
 
     property_override("ro.lmk.psi_partial_stall_ms", partialstall);
