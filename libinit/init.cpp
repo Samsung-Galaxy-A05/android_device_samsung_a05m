@@ -68,7 +68,7 @@ void load_mem_properties()
         thrashlimdec = "10";
         swapfreelow = "20";
         upressure = "50";
-    } else if (sys.totalram >= 3ull * 1024 * 1024 * 1024) {
+    } else {
         // from - phone-xhdpi-4096-dalvik-heap.mk
         heapstartsize = "8m";
         heapgrowthlimit = "192m";
@@ -84,7 +84,6 @@ void load_mem_properties()
         thrashlimdec = "20";
         swapfreelow = "18";
         upressure = "60";
-        property_override("ro.config.art_lowmem", "true");
     }
 
     property_override("dalvik.vm.heapstartsize", heapstartsize);
