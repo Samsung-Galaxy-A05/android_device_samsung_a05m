@@ -120,6 +120,9 @@ PRODUCT_PACKAGES += \
     android.hardware.security.rkp-V1-ndk \
     libkeymaster4_1support.vendor
 
+# Kernel
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
