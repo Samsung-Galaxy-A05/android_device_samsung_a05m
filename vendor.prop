@@ -141,6 +141,20 @@ debug.cpurend.vsync=false
 debug.hwui.target_cpu_time_percent=30
 debug.hwui.use_hint_manager=true
 
+# Incremental FS
+ro.incremental.enable=1
+
+# LMK
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=100
+ro.lmk.log_stats=false
+ro.lmk.use_minfree_levels=true
+ro.lmk.use_new_strategy=true
+ro.lmk.filecache_min_kb=153600
+ro.lmk.stall_limit_critical=40
+ro.lmk.swap_compression_ratio=2
+ro.lmk.lowmem_min_oom_score=851
+
 # MTK
 ro.netflix.bsp_rev=MTK6769-33944-1
 ro.vendor.mediatek.platform=MT6768
@@ -158,17 +172,6 @@ ro.vendor.vt.mtk_thin_md_support_mode=0
 ro.vendor.mtk_wappush_support=1
 ro.vendor.mtk_dmc_support=1
 ro.vendor.mtk_mapi_support=1
-
-# LMK
-ro.lmk.kill_heaviest_task=true
-ro.lmk.kill_timeout_ms=100
-ro.lmk.log_stats=false
-ro.lmk.use_minfree_levels=true
-ro.lmk.use_new_strategy=true
-ro.lmk.filecache_min_kb=153600
-ro.lmk.stall_limit_critical=40
-ro.lmk.swap_compression_ratio=2
-ro.lmk.lowmem_min_oom_score=851
 
 # Media
 media.c2.dmabuf.padding=3072
