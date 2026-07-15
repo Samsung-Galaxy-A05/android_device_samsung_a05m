@@ -1912,7 +1912,7 @@ vendor/lib64/libsecnativefeature.so|09d553fbb948043a80adcb8824cbbca50eb65086
 vendor/bin/hw/rild|006374bbdd818b1d6ee83617ddabbf4073974e0e
 vendor/etc/init/init.vendor.rilcommon.rc|eb3115e335457fdc95c854190ee6804e165718f2
 vendor/etc/init/vendor.samsung.rilchip.slsi.rc|95aa52333814b340e5064eae3a9bd5cb8a96a3ff
-vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_33.xml|0ce59a2abb0f18aaa24c880515f6d5dc30b18c35
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_33.xml|b00b259e237f9c3789d0509892e66e55932c9870
 vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_33.xml|ebbe359a9b2d78cb88debe79d9183c039afb7c01
 vendor/etc/plmn_delta.bin|6a826cb6a8a1d460403ab2ebccf4f0d7be546ce6
 vendor/etc/plmn_delta_hktw.bin|97a5a4747e8c32d463d8f26254257309b8a03a63
