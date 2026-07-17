@@ -89,8 +89,7 @@ PRODUCT_COPY_FILES += \
 
 # Fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl-mock \
-    fastbootd
+    android.hardware.fastboot@1.1-impl-mock
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
