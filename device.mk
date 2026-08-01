@@ -320,7 +320,11 @@ $(call inherit-product, vendor/samsung/kpoc_charger/kpoc_charger.mk)
 # Inherit TEE drivers
 $(call inherit-product, vendor/samsung/a05m-tee/tee.mk)
 # Inherit the sign keys
+ifeq ($(shell test -d vendor/rsuntk-priv; echo $$?),0)
+$(call inherit-product, vendor/rsuntk-priv/keys/keys.mk)
+else
 $(call inherit-product, vendor/lineage-priv/keys/keys.mk)
+endif
 # WingCam-N28
 $(call inherit-product, vendor/samsung/wing-camera/wingcamera-samsung.mk)
 # SamsungParts
