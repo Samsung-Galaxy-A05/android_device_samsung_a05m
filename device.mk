@@ -330,6 +330,7 @@ $(call inherit-product, vendor/samsung/wing-camera/wingcamera-samsung.mk)
 $(call inherit-product, packages/apps/SamsungParts/samsungparts.mk)
 
 ifeq ($(BUILD_WITH_GAPPS),true)
+$(warning "Shipping with GMS Mini")
 WITH_GMS := true
 TARGET_USES_MINI_GAPPS := true
 endif
