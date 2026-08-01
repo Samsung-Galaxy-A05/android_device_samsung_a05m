@@ -13,6 +13,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+# Build with GMS
+BUILD_WITH_GAPPS ?= false
 
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
@@ -321,3 +323,10 @@ $(call inherit-product, vendor/samsung/a05m-tee/tee.mk)
 $(call inherit-product, vendor/lineage-priv/keys/keys.mk)
 # WingCam-N28
 $(call inherit-product, vendor/samsung/wing-camera/wingcamera-samsung.mk)
+# SamsungParts
+$(call inherit-product, packages/apps/SamsungParts/samsungparts.mk)
+
+ifeq ($(BUILD_WITH_GAPPS),true)
+WITH_GMS := true
+TARGET_USES_MINI_GAPPS := true
+endif
