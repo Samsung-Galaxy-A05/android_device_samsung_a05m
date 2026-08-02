@@ -15,6 +15,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Build with GMS
 BUILD_WITH_GAPPS ?= false
+ifeq ($(BUILD_WITH_GAPPS),true)
+$(warning "Shipping with GMS Mini")
+WITH_GMS := true
+TARGET_USES_MINI_GAPPS := true
+else
+WITH_GMS := false
+endif
 
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
@@ -328,9 +335,3 @@ endif
 $(call inherit-product, vendor/samsung/wing-camera/wingcamera-samsung.mk)
 # SamsungParts
 $(call inherit-product, packages/apps/SamsungParts/samsungparts.mk)
-
-ifeq ($(BUILD_WITH_GAPPS),true)
-$(warning "Shipping with GMS Mini")
-WITH_GMS := true
-TARGET_USES_MINI_GAPPS := true
-endif
