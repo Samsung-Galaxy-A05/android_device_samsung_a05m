@@ -34,6 +34,13 @@ static void property_override(const char* prop, const char* value, bool add = tr
 
 void load_mem_properties()
 {
+    char const *heapstartsize;
+    char const *heapgrowthlimit;
+    char const *heapsize;
+    char const *heapminfree;
+    char const *heapmaxfree;
+    char const *heaptargetutilization;
+
     char const *partialstall;
     char const *completestall;
     char const *thrashlim;
@@ -46,6 +53,13 @@ void load_mem_properties()
     sysinfo(&sys);
 
     if (sys.totalram >= 5ull * 1024 * 1024 * 1024) {
+        // from - phone-xhdpi-6144-dalvik-heap.mk
+        heapstartsize = "16m";
+        heapgrowthlimit = "256m";
+        heapsize = "512m";
+        heaptargetutilization = "0.5";
+        heapminfree = "8m";
+        heapmaxfree = "32m";
         // from lmkd defaults for high perf devices
         // except completestall, default 700
         partialstall = "70";
@@ -54,15 +68,14 @@ void load_mem_properties()
         thrashlimdec = "10";
         swapfreelow = "20";
         upressure = "50";
-    } else if (sys.totalram >= 3ull * 1024 * 1024 * 1024) {
+    } else {
         // from - phone-xhdpi-4096-dalvik-heap.mk
-        property_override("dalvik.vm.heapstartsize", "8m");
-        property_override("dalvik.vm.heapgrowthlimit", "192m");
-        property_override("dalvik.vm.heapsize", "512m");
-        property_override("dalvik.vm.heaptargetutilization", "0.6");
-        property_override("dalvik.vm.heapminfree", "8m");
-        property_override("dalvik.vm.heapmaxfree", "16m");
-
+        heapstartsize = "8m";
+        heapgrowthlimit = "192m";
+        heapsize = "512m";
+        heaptargetutilization = "0.6";
+        heapminfree = "8m";
+        heapmaxfree = "16m";
         // from lmkd defaults for high perf devices
         // tuned lower, clamped stall
         partialstall = "80";
@@ -73,6 +86,13 @@ void load_mem_properties()
         upressure = "60";
         property_override("ro.config.art_lowmem", "true");
     }
+
+    property_override("dalvik.vm.heapstartsize", heapstartsize);
+    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_override("dalvik.vm.heapsize", heapsize);
+    property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
+    property_override("dalvik.vm.heapminfree", heapminfree);
+    property_override("dalvik.vm.heapmaxfree", heapmaxfree);
 
     property_override("ro.lmk.psi_partial_stall_ms", partialstall);
     property_override("ro.lmk.psi_complete_stall_ms", completestall);
