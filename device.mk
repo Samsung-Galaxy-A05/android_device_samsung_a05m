@@ -290,7 +290,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.pixel \
+    android.hardware.thermal-service.mediatek \
     thermal_symlinks
 
 PRODUCT_COPY_FILES += \
