@@ -80,16 +80,10 @@ PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapmaxfree=12m \
-    dalvik.vm.heapminfree=8m \
-    dalvik.vm.heaptargetutilization=0.6 \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt \
-    dalvik.vm.heapgrowthlimit=256m \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heapgrowthlimit=256m \
-    dalvik.vm.heapsize=512m
+    dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
 
 # DRM (Clearkey)
 PRODUCT_PACKAGES += \
