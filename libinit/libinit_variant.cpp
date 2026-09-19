@@ -18,6 +18,7 @@ static variant_info_t a055f_info = {
 
     .brand = "samsung",
     .device = "a05m",
+    .name = "a05mxx",
     .model = "SM-A055F",
     .build_fingerprint = "",
 };
@@ -28,6 +29,7 @@ static variant_info_t a055m_info = {
 
     .brand = "samsung",
     .device = "a05m",
+    .name = "a05mub",
     .model = "SM-A055M",
     .build_fingerprint = "",
 };
