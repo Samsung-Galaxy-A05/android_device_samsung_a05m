@@ -57,9 +57,6 @@ void set_variant_props(const variant_info_t& info) {
         if (!info.name.empty())
             property_override("ro.product." + part + "name", info.name);
 
-        if (!info.marketname.empty())
-            property_override("ro.product." + part + "marketname", info.marketname);
-
         if (!info.build_fingerprint.empty()) {
             if (part.empty()) {
                 property_override("ro.build.fingerprint", info.build_fingerprint);
