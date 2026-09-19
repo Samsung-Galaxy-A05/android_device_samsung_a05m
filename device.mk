@@ -276,7 +276,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/mediatek/libmtkperf_client \
-    hardware/mediatek/libaedv \
     hardware/mediatek \
     hardware/samsung 
 
