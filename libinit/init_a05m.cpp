@@ -11,7 +11,7 @@
 
 void vendor_process_bootenv() {
     set_memory_profile();
-    vendor_load_properties();
+    load_model_variants();
 }
 
 void vendor_load_properties() {

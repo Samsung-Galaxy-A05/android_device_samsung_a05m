@@ -75,7 +75,7 @@ static std::string build_fingerprint(const std::string& brand, const std::string
     return brand + "/" + name + "/" + device + ":" + release + "/" + build_id + "/" + incremental + ":user/" + keys;
 }
 
-void vendor_load_properties() {
+void load_model_variants(void) {
     std::string em_model = GetProperty("ro.boot.em.model", "");
     std::string bootloader = GetProperty("ro.boot.bootloader", "");
     variant_info_t selected_info;
