@@ -1763,7 +1763,6 @@ vendor/lib64/libpixelflinger.so
 vendor/lib64/libminiui.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
-vendor/lib64/libladder.so
 vendor/lib64/libmmprofile.so
 vendor/lib64/vendor.mediatek.hardware.mmlpq-V3-ndk.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
