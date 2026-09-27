@@ -280,9 +280,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel/power-libperfmgr \
     hardware/google/interfaces \
     hardware/lineage/interfaces/power-libperfmgr \
-    hardware/mediatek/libmtkperf_client \
     hardware/mediatek \
-    hardware/samsung 
+    hardware/mediatek/libmtkperf_client \
+    hardware/mediatek/libion_mtk \
+    hardware/samsung
 
 # Thermal
 PRODUCT_PACKAGES += \

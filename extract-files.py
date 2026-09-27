@@ -30,6 +30,7 @@ namespace_imports = [
     'device/samsung/a05m',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
+    'hardware/mediatek/libion_mtk',
     'hardware/samsung',
 ]
 
