@@ -23,11 +23,6 @@ else
 WITH_GMS := false
 endif
 
-# AEE (stub)
-PRODUCT_PACKAGES += \
-    libaedv \
-    libladder
-
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
 
