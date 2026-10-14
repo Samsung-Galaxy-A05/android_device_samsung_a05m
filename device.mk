@@ -306,6 +306,9 @@ PRODUCT_PACKAGES += \
    vndservicemanager \
    vndservice
 
+# Vendor Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):init_a05m)
+
 # WiFi
 PRODUCT_CFI_INCLUDE_PATHS += hardware/mediatek/wlan/wpa_supplicant_8_lib
 
