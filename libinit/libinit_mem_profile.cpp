@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#include <stdint.h>
 #include <sys/sysinfo.h>
 #include <libinit_utils.h>
 
@@ -25,7 +26,7 @@
 
 #define ART_LOWMEM_PROP "ro.config.art_lowmem"
 
-#define GB(b) (b * 1024ull * 1024 * 1024)
+#define GB(b) ((b) * 1024ull * 1024 * 1024)
 
 static const memory_profile_t memory_6144 = {
     // from - phone-xhdpi-6144-dalvik-heap.mk
@@ -36,7 +37,7 @@ static const memory_profile_t memory_6144 = {
     .heapmaxfree = "32m",
     .heaptargetutilization = "0.5",
 
-    // lmkd profile    
+    // lmkd profile
     .partialstall = "70",
     .completestall = "140",
     .thrashlim = "100",
@@ -57,7 +58,7 @@ static const memory_profile_t memory_4096 = {
     .heapmaxfree = "16m",
     .heaptargetutilization = "0.6",
 
-    // lmkd profile    
+    // lmkd profile
     .partialstall = "80",
     .completestall = "240",
     .thrashlim = "70",
@@ -78,7 +79,7 @@ static const memory_profile_t memory_2048 = {
     .heapmaxfree = "8m",
     .heaptargetutilization = "0.75",
 
-    // lmkd profile    
+    // lmkd profile
     .partialstall = "135",
     .completestall = "540",
     .thrashlim = "50",
@@ -93,11 +94,16 @@ static const memory_profile_t memory_2048 = {
 void set_memory_profile() {
     struct sysinfo sys;
     const memory_profile_t *mp;
-    sysinfo(&sys);
 
-    if (sys.totalram > GB(5))
+    uint64_t total_bytes = 0;
+    if (sysinfo(&sys) == 0)
+        total_bytes = (uint64_t)sys.totalram * (sys.mem_unit ? sys.mem_unit : 1);
+
+    if (total_bytes == 0)
+        mp = &memory_4096;
+    else if (total_bytes > GB(5))
         mp = &memory_6144;
-    else if (sys.totalram > GB(3))
+    else if (total_bytes > GB(3))
         mp = &memory_4096;
     else
         mp = &memory_2048;
@@ -115,6 +121,6 @@ void set_memory_profile() {
     property_override(THRASHLIMDEC_PROP, mp->thrashlimdec);
     property_override(SWAPFREELOW_PROP, mp->swapfreelow);
     property_override(UPRESSURE_PROP, mp->upressure);
-    
+
     property_override(ART_LOWMEM_PROP, mp->art_lowmem);
 }

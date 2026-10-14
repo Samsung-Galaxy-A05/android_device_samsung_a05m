@@ -9,6 +9,6 @@
 
 #include <string>
 
-void property_override(std::string prop, std::string value, bool add = true);
+void property_override(const std::string& prop, const std::string& value, bool add = true);
 
 #endif // LIBINIT_UTILS_H

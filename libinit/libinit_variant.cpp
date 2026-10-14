@@ -4,6 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#include <string>
+#include <vector>
+
 #include <android-base/logging.h>
 #include <android-base/properties.h>
 #include <libinit_utils.h>
@@ -12,7 +15,11 @@
 
 using android::base::GetProperty;
 
-static variant_info_t a055f_info = {
+#define DEFAULT_BOOTLOADER "A055FXXSBDYJ2"
+#define BUILD_RELEASE "15"
+#define BUILD_ID "AP3A.240905.015.A2"
+
+static const variant_info_t a055f_info = {
     .hwc_value = "",
     .sku_value = "",
 
@@ -23,7 +30,7 @@ static variant_info_t a055f_info = {
     .build_fingerprint = "",
 };
 
-static variant_info_t a055m_info = {
+static const variant_info_t a055m_info = {
     .hwc_value = "",
     .sku_value = "",
 
@@ -68,48 +75,40 @@ void set_variant_props(const variant_info_t& info) {
 }
 
 // Helper function to build a standard Android fingerprint
-static std::string build_fingerprint(const std::string& brand, const std::string& name, 
-                                 const std::string& device, const std::string& release, 
-                                 const std::string& build_id, const std::string& incremental, 
-                                 const std::string& keys) {
-    return brand + "/" + name + "/" + device + ":" + release + "/" + build_id + "/" + incremental + ":user/" + keys;
+static std::string build_fingerprint(const std::string& brand, const std::string& name,
+                                     const std::string& device, const std::string& release,
+                                     const std::string& build_id, const std::string& incremental,
+                                     const std::string& keys) {
+    return brand + "/" + name + "/" + device + ":" + release + "/" + build_id + "/" +
+           incremental + ":user/" + keys;
 }
 
 void load_model_variants(void) {
     std::string em_model = GetProperty("ro.boot.em.model", "");
     std::string bootloader = GetProperty("ro.boot.bootloader", "");
-    variant_info_t selected_info;
-    std::string build_name;
 
-    if (bootloader.empty() && em_model.empty()) {
-        bootloader = "A055FXXSBDYJ2";
-        em_model = "SM-A055F";
-        build_name = "a05mxx";
-        selected_info = a055f_info;
-        goto skip;
-    }
+    bool is_a055m = (em_model == "SM-A055M") ||
+                    (em_model.empty() && bootloader.rfind("A055M", 0) == 0);
+    variant_info_t selected_info = is_a055m ? a055m_info : a055f_info;
 
-    if (em_model == "SM-A055M") {
-        selected_info = a055m_info;
-        build_name = "a05mub";
-    } else {
-        selected_info = a055f_info;
-        build_name = "a05mxx";
-    }
+    if (bootloader.empty())
+        bootloader = GetProperty("ro.build.version.incremental", "");
+    if (bootloader.empty())
+        bootloader = DEFAULT_BOOTLOADER;
 
-skip:
-    std::string dynamic_fingerprint = build_fingerprint(
+    selected_info.build_fingerprint = build_fingerprint(
         selected_info.brand,
-        build_name,
+        selected_info.name,
         selected_info.device,
-        "15",
-        "AP3A.240905.015.A2",
+        BUILD_RELEASE,
+        BUILD_ID,
         bootloader,
         "release-keys"
     );
 
-    selected_info.build_fingerprint = dynamic_fingerprint;
     set_variant_props(selected_info);
-    std::string build_desc = build_name + "-user 15 AP3A.240905.015.A2 " + bootloader + " release-keys";
+
+    std::string build_desc = selected_info.name + "-user " BUILD_RELEASE " " BUILD_ID " " +
+                             bootloader + " release-keys";
     property_override("ro.build.description", build_desc);
 }

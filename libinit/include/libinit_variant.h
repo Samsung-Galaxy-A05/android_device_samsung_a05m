@@ -21,6 +21,7 @@ typedef struct variant_info {
 
 } variant_info_t;
 
+void set_variant_props(const variant_info_t& info);
 void load_model_variants(void);
 
 #endif // LIBINIT_VARIANT_H
